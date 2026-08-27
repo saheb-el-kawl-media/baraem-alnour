@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مِنَصَّةُ التَّعَلُّمِ الْمُمْتِعِ - الجُمْلَةُ الاسْمِيَّةُ وَالفِعْلِيَّةُ</title>
+    <meta property="og:title" content="منصة النجوم للغة العربية - الجملة الاسمية والفعلية">
+    <meta property="og:description" content="منصة تعليمية تفاعلية للسنة الثالثة أساسي: شرح، تمارين، ومختبر كلمات حول الجملة الاسمية والفعلية">
+    <meta property="og:image" content="https://saheb-el-kawl-media.github.io/baraem-alnour/og_jomlaa.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://saheb-el-kawl-media.github.io/baraem-alnour/jomlaa.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="منصة النجوم للغة العربية - الجملة الاسمية والفعلية">
+    <meta name="twitter:description" content="منصة تعليمية تفاعلية للسنة الثالثة أساسي: شرح، تمارين، ومختبر كلمات">
+    <meta name="twitter:image" content="https://saheb-el-kawl-media.github.io/baraem-alnour/og_jomlaa.png">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Marhey & Tajawal for modern Arabic typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marhey:wght@500;700&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: linear-gradient(135deg, #e0f2fe 0%, #fef3c7 45%, #fce7f3 80%, #ede9fe 100%);
+            background-attachment: fixed;
+            color: #1e293b;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .kids-heading {
+            font-family: 'Marhey', cursive;
+        }
+
+        /* Floating background decorative bubbles */
+        .bg-bubbles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.35;
+            animation: floatBubble 14s infinite linear;
+        }
+
+        @keyframes floatBubble {
+            0% { transform: translateY(100vh) scale(0.8) rotate(0deg); }
+            50% { transform: translateY(50vh) scale(1.1) rotate(180deg); }
+            100% { transform: translateY(-15vh) scale(0.9) rotate(360deg); }
+        }
+
+        .floating-element {
+            animation: gentleFloat 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes gentleFloat {
+            0% { transform: translateY(0px) rotate(0deg); }
+            100% { transform: translateY(-8px) rotate(2deg); }
+        }
+
+        .interactive-card {
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .interactive-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+        }
+
+        .btn-press {
+            transition: all 0.15s ease;
+        }
+
+        .btn-press:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-amber-300 selection:text-amber-900">
+
+    <div class="bg-bubbles">
+        <div class="bubble bg-amber-300 w-24 h-24" style="left: 6%; animation-duration: 14s; animation-delay: 0s;"></div>
+        <div class="bubble bg-sky-300 w-32 h-32" style="left: 26%; animation-duration: 18s; animation-delay: 2s;"></div>
+        <div class="bubble bg-pink-300 w-20 h-20" style="left: 62%; animation-duration: 16s; animation-delay: 1s;"></div>
+        <div class="bubble bg-emerald-300 w-28 h-28" style="left: 88%; animation-duration: 15s; animation-delay: 3s;"></div>
+    </div>
+
+    <header class="relative z-10 px-4 pt-4 pb-2">
+        <div class="max-w-6xl mx-auto bg-white/90 backdrop-blur-md border-4 border-amber-300 shadow-xl rounded-3xl p-4 md:p-5 flex flex-wrap justify-between items-center gap-4">
+            
+            <!-- Logo & Level Identification -->
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <div class="w-14 h-14 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center text-3xl shadow-md floating-element">
+                    🌟
+                </div>
+                <div>
+                    <h1 class="kids-heading text-xl md:text-2xl text-amber-700 font-bold drop-shadow-sm">
+                        مِنَصَّةُ النُّجُومِ لِلُّغَةِ العَرَبِيَّةِ
+                    </h1>
+                    <p class="text-xs md:text-sm font-bold text-sky-700 flex items-center gap-1.5 mt-0.5">
+                        <span>🇹🇳</span> السَّنَةُ الثَّالِثَةُ مِنَ التَّعْلِيمِ الأَسَاسِيِّ
+                    </p>
+                </div>
+            </div>
+
+            <!-- Tab Buttons Navigation -->
+            <nav class="flex flex-wrap gap-2 text-sm font-bold">
+                <button onclick="switchTab('rules')" id="tab-rules" class="btn-press px-4 py-2 rounded-2xl bg-amber-500 text-white shadow-md border-2 border-amber-600 transition-all">
+                    💡 الشَّرْحُ وَالقَوَاعِدُ
+                </button>
+                <button onclick="switchTab('tester')" id="tab-tester" class="btn-press px-4 py-2 rounded-2xl bg-white text-sky-700 hover:bg-sky-50 border-2 border-sky-200 transition-all">
+                    🔍 مُخْتَبَرُ الكَلِمَاتِ
+                </button>
+                <button onclick="switchTab('converter')" id="tab-converter" class="btn-press px-4 py-2 rounded-2xl bg-white text-emerald-700 hover:bg-emerald-50 border-2 border-emerald-200 transition-all">
+                    🔄 مُحَوِّلُ الجُمَلِ
+                </button>
+                <button onclick="switchTab('quiz')" id="tab-quiz" class="btn-press px-4 py-2 rounded-2xl bg-white text-rose-700 hover:bg-rose-50 border-2 border-rose-200 transition-all">
+                    🎯 التَّمَارِينُ وَالتَّحَدِّي
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="relative z-10 flex-grow max-w-6xl mx-auto w-full px-4 py-6">
+
+        <!-- ==================== TAB 1: RULES & LESSON ==================== -->
+        <section id="sec-rules" class="space-y-6">
+
+            <!-- Friendly Welcome Card -->
+            <div class="bg-white/95 backdrop-blur-md rounded-3xl p-6 shadow-lg border-3 border-sky-200">
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="text-3xl">🎈</span>
+                    <h2 class="kids-heading text-xl md:text-2xl font-bold text-sky-800">
+                        مَرْحَبًا بِأَبْطَالِ السَّنَةِ الثَّالِثَةِ!
+                    </h2>
+                </div>
+                <p class="text-slate-700 text-base md:text-lg leading-relaxed font-medium">
+                    سَنَتَعَلَّمُ مَعًا كَيْفَ نُمَيِّزُ بِكُلِّ سُهُولَةٍ بَيْنَ <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded-lg font-bold">الجُمْلَةِ الفِعْلِيَّةِ</span> وَ <span class="bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-lg font-bold">الجُمْلَةِ الاسْمِيَّةِ</span> بِاسْتِخْدَامِ قَاعِدَةِ الكَلِمَةِ الأُولَى السِّحْرِيَّةِ!
+                </p>
+            </div>
+
+            <!-- Golden Rule Highlight Card -->
+            <div class="bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500 text-white rounded-3xl p-6 md:p-8 shadow-xl border-4 border-amber-300 relative overflow-hidden">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="space-y-3 text-center md:text-right">
+                        <span class="bg-white/25 text-amber-950 font-black text-xs md:text-sm px-4 py-1.5 rounded-full inline-block shadow-sm">
+                            ⭐ السِّرُّ الذَّهَبِيُّ لِلْبَطَلِ الصَّغِيرِ ⭐
+                        </span>
+                        <h3 class="kids-heading text-2xl md:text-3xl font-extrabold text-white drop-shadow">
+                            ضَعْ إِصْبَعَكَ عَلَى الكَلِمَةِ الأُولَى فَقَطْ!
+                        </h3>
+                        <p class="text-amber-50 text-base md:text-lg leading-relaxed max-w-2xl font-semibold">
+                            لِمَعْرِفَةِ نَوْعِ الجُمْلَةِ، اُنْظُرْ دَائِمًا إِلَى <span class="bg-white text-orange-600 px-2.5 py-0.5 rounded-xl font-black shadow-sm">الْكَلِمَةِ الأُولَى</span>: 
+                            إِذَا كَانَتْ <span class="underline decoration-wavy decoration-yellow-200">فِعْلًا</span> فَالْجُمْلَةُ فِعْلِيَّةٌ، وَإِذَا كَانَتْ <span class="underline decoration-wavy decoration-yellow-200">اسْمًا</span> فَالْجُمْلَةُ اسْمِيَّةٌ.
+                        </p>
+                    </div>
+                    <div class="text-7xl floating-element select-none">
+                        👇
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- How to detect a Noun -->
+                <div class="interactive-card bg-white/95 backdrop-blur-md rounded-3xl p-6 border-4 border-emerald-300 shadow-md">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-black text-2xl shadow-inner">1</span>
+                        <h3 class="kids-heading text-xl font-bold text-emerald-800">كَيْفَ أَعْرِفُ أَنَّ الكَلِمَةَ اسْمٌ؟</h3>
+                    </div>
+                    <p class="text-sm md:text-base text-slate-700 font-semibold mb-4">
+                        الاسْمُ يَدُلُّ عَلَى إِنْسَانٍ، حَيَوَانٍ، شَيْءٍ، أَوْ نَبَاتٍ، وَيَقْبَلُ:
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 bg-emerald-50 p-3 rounded-2xl border-2 border-emerald-100 text-emerald-950 font-bold text-sm md:text-base">
+                            <span class="text-2xl">✅</span>
+                            <div>دُخُولُ «الـ» التَّعْرِيفِ: <span class="text-emerald-700 font-extrabold">(وَلَدٌ ← الوَلَدُ)</span></div>
+                        </div>
+                        <div class="flex items-center gap-3 bg-emerald-50 p-3 rounded-2xl border-2 border-emerald-100 text-emerald-950 font-bold text-sm md:text-base">
+                            <span class="text-2xl">✅</span>
+                            <div>التَّنْوِينُ: <span class="text-emerald-700 font-extrabold">(شَجَرَةٌ / شَجَرَةً / شَجَرَةٍ)</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- How to detect a Verb -->
+                <div class="interactive-card bg-white/95 backdrop-blur-md rounded-3xl p-6 border-4 border-sky-300 shadow-md">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-700 flex items-center justify-center font-black text-2xl shadow-inner">2</span>
+                        <h3 class="kids-heading text-xl font-bold text-sky-800">كَيْفَ أَعْرِفُ أَنَّ الكَلِمَةَ فِعْلٌ؟</h3>
+                    </div>
+                    <p class="text-sm md:text-base text-slate-700 font-semibold mb-4">
+                        الفِعْلُ يَدُلُّ عَلَى حَرَكَةٍ أَوْ عَمَلٍ فِي زَمَنٍ، وَ<strong>لاَ يَقْبَلُ</strong> «الـ» وَلاَ التَّنْوِينَ:
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 bg-rose-50 p-3 rounded-2xl border-2 border-rose-100 text-rose-950 font-bold text-sm md:text-base">
+                            <span class="text-2xl">❌</span>
+                            <div>لاَ يَصِحُّ أَنْ نَقُولَ: <span class="line-through text-rose-600">(الْكَتَبَ)</span> أَوْ <span class="line-through text-rose-600">(كَتَبٌ)</span>.</div>
+                        </div>
+                        <div class="flex items-center gap-3 bg-sky-50 p-3 rounded-2xl border-2 border-sky-100 text-sky-950 font-bold text-sm md:text-base">
+                            <span class="text-2xl">🏃‍♂️</span>
+                            <div>أَمْثِلَةُ أَفْعَالٍ: <span class="text-sky-700 font-extrabold">(كَتَبَ - يَلْعَبُ - يَرْسُمُ - نَامَ)</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Verbal Sentence Card -->
+                <div class="interactive-card bg-white/95 backdrop-blur-md rounded-3xl p-6 border-4 border-blue-300 shadow-lg">
+                    <div class="flex items-center justify-between pb-3 border-b-2 border-blue-100 mb-4">
+                        <h3 class="kids-heading text-xl md:text-2xl font-bold text-blue-700 flex items-center gap-2">
+                            <span>🏃‍♀️</span> الجُمْلَةُ الفِعْلِيَّةُ
+                        </h3>
+                        <span class="bg-blue-100 text-blue-800 text-xs md:text-sm font-black px-3 py-1 rounded-full">تَبْدَأُ بِفِعْلٍ</span>
+                    </div>
+                    <p class="text-slate-700 font-semibold mb-4">
+                        تَتَكَوَّنُ الجُمْلَةُ الفِعْلِيَّةُ فِي السَّنَةِ الثَّالِثَةِ مِنْ:
+                    </p>
+                    
+                    <div class="grid grid-cols-3 gap-2 text-center text-xs md:text-sm font-bold mb-4">
+                        <div class="bg-blue-50 border-2 border-blue-200 p-2.5 rounded-2xl">
+                            <span class="text-blue-800 block text-base">1. الفِعْلُ</span>
+                            <span class="text-slate-500 text-xs font-normal">مَاذَا حَدَثَ؟</span>
+                        </div>
+                        <div class="bg-blue-50 border-2 border-blue-200 p-2.5 rounded-2xl">
+                            <span class="text-blue-800 block text-base">2. الفَاعِلُ</span>
+                            <span class="text-slate-500 text-xs font-normal">مَنْ قَامَ بِهِ؟</span>
+                        </div>
+                        <div class="bg-blue-50 border-2 border-blue-200 p-2.5 rounded-2xl">
+                            <span class="text-blue-800 block text-base">3. المُتَمِّمُ</span>
+                            <span class="text-slate-500 text-xs font-normal">مَكَانٌ / مَفْعُولٌ</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2 text-sm md:text-base font-bold">
+                        <p class="text-slate-800 font-bold mb-1">أَمْثِلَةٌ مُشَوِّقَةٌ:</p>
+                        <div class="p-3 bg-blue-50/70 rounded-2xl border border-blue-200 flex justify-between items-center">
+                            <span>« <strong class="text-blue-700 text-lg">قَرَأَ</strong> التِّلْمِيذُ قِصَّةً »</span>
+                            <span class="text-xs bg-blue-200 text-blue-900 px-2.5 py-1 rounded-xl">بدأت بفعل</span>
+                        </div>
+                        <div class="p-3 bg-blue-50/70 rounded-2xl border border-blue-200 flex justify-between items-center">
+                            <span>« <strong class="text-blue-700 text-lg">تُرَتِّبُ</strong> مَرْيَمُ غُرْفَتَهَا »</span>
+                            <span class="text-xs bg-blue-200 text-blue-900 px-2.5 py-1 rounded-xl">بدأت بفعل</span>
+                        </div>
+                        <div class="p-3 bg-blue-50/70 rounded-2xl border border-blue-200 flex justify-between items-center">
+                            <span>« <strong class="text-blue-700 text-lg">نَزَلَ</strong> المَطَرُ غَزِيرًا »</span>
+                            <span class="text-xs bg-blue-200 text-blue-900 px-2.5 py-1 rounded-xl">بدأت بفعل</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nominal Sentence Card -->
+                <div class="interactive-card bg-white/95 backdrop-blur-md rounded-3xl p-6 border-4 border-emerald-300 shadow-lg">
+                    <div class="flex items-center justify-between pb-3 border-b-2 border-emerald-100 mb-4">
+                        <h3 class="kids-heading text-xl md:text-2xl font-bold text-emerald-700 flex items-center gap-2">
+                            <span>🏫</span> الجُمْلَةُ الاِسْمِيَّةُ
+                        </h3>
+                        <span class="bg-emerald-100 text-emerald-800 text-xs md:text-sm font-black px-3 py-1 rounded-full">تَبْدَأُ بِاسْمٍ</span>
+                    </div>
+                    <p class="text-slate-700 font-semibold mb-4">
+                        تَتَكَوَّنُ الجُمْلَةُ الاسْمِيَّةُ فِي السَّنَةِ الثَّالِثَةِ مِنْ:
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-3 text-center text-xs md:text-sm font-bold mb-4">
+                        <div class="bg-emerald-50 border-2 border-emerald-200 p-2.5 rounded-2xl">
+                            <span class="text-emerald-800 block text-base">1. المُبْتَدَأُ</span>
+                            <span class="text-slate-500 text-xs font-normal">الاسم الذي نبدأ به</span>
+                        </div>
+                        <div class="bg-emerald-50 border-2 border-emerald-200 p-2.5 rounded-2xl">
+                            <span class="text-emerald-800 block text-base">2. الخَبَرُ</span>
+                            <span class="text-slate-500 text-xs font-normal">يُتَمِّمُ مَعْنَى الجُمْلَةِ</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2 text-sm md:text-base font-bold">
+                        <p class="text-slate-800 font-bold mb-1">أَمْثِلَةٌ مُشَوِّقَةٌ:</p>
+                        <div class="p-3 bg-emerald-50/70 rounded-2xl border border-emerald-200 flex justify-between items-center">
+                            <span>« <strong class="text-emerald-700 text-lg">المَدْرَسَةُ</strong> نَظِيفَةٌ »</span>
+                            <span class="text-xs bg-emerald-200 text-emerald-900 px-2.5 py-1 rounded-xl">بدأت باسم</span>
+                        </div>
+                        <div class="p-3 bg-emerald-50/70 rounded-2xl border border-emerald-200 flex justify-between items-center">
+                            <span>« <strong class="text-emerald-700 text-lg">سَالِمٌ</strong> تِلْمِيذٌ مُجْتَهِدٌ »</span>
+                            <span class="text-xs bg-emerald-200 text-emerald-900 px-2.5 py-1 rounded-xl">بدأت باسم</span>
+                        </div>
+                        <div class="p-3 bg-emerald-50/70 rounded-2xl border border-emerald-200 flex justify-between items-center">
+                            <span>« <strong class="text-emerald-700 text-lg">العُصْفُورُ</strong> يُغَرِّدُ »</span>
+                            <span class="text-xs bg-emerald-200 text-emerald-900 px-2.5 py-1 rounded-xl">بدأت باسم</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white/95 backdrop-blur-md rounded-3xl p-6 border-4 border-amber-200 shadow-md">
+                <h3 class="kids-heading text-xl font-bold text-amber-800 mb-4 flex items-center gap-2">
+                    <span>📊</span> جَدْوَلُ المُقَارَنَةِ وَالتَّحْوِيلِ
+                </h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm md:text-base text-right border-collapse">
+                        <thead>
+                            <tr class="bg-amber-100 text-amber-900 border-b-2 border-amber-200">
+                                <th class="p-3.5 rounded-tr-2xl font-bold">الجُمْلَةُ الفِعْلِيَّةُ</th>
+                                <th class="p-3.5 font-bold">الجُمْلَةُ الاسْمِيَّةُ المُقَابِلَةُ</th>
+                                <th class="p-3.5 rounded-tl-2xl font-bold">كَيْفَ حَوَّلْنَا؟</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-amber-100 font-bold">
+                            <tr class="hover:bg-amber-50/50 transition-colors">
+                                <td class="p-3.5 text-blue-700"><span class="underline">يَرْكُضُ</span> الوَلَدُ فِي السَّاحَةِ.</td>
+                                <td class="p-3.5 text-emerald-700"><span class="underline">الوَلَدُ</span> يَرْكُضُ فِي السَّاحَةِ.</td>
+                                <td class="p-3.5 text-slate-600 font-medium">نُقَدِّمُ الاسْمَ عَلَى الفِعْلِ</td>
+                            </tr>
+                            <tr class="hover:bg-amber-50/50 transition-colors">
+                                <td class="p-3.5 text-blue-700"><span class="underline">تُشْرِقُ</span> الشَّمْسُ صَبَاحًا.</td>
+                                <td class="p-3.5 text-emerald-700"><span class="underline">الشَّمْسُ</span> تُشْرِقُ صَبَاحًا.</td>
+                                <td class="p-3.5 text-slate-600 font-medium">نُقَدِّمُ الاسْمَ عَلَى الفِعْلِ</td>
+                            </tr>
+                            <tr class="hover:bg-amber-50/50 transition-colors">
+                                <td class="p-3.5 text-blue-700"><span class="underline">نَجَحَ</span> المُجْتَهِدُ فِي الِامْتِحَانِ.</td>
+                                <td class="p-3.5 text-emerald-700"><span class="underline">المُجْتَهِدُ</span> نَجَحَ فِي الِامْتِحَانِ.</td>
+                                <td class="p-3.5 text-slate-600 font-medium">نُقَدِّمُ الاسْمَ عَلَى الفِعْلِ</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ==================== TAB 2: WORD TESTER LAB ==================== -->
+        <section id="sec-tester" class="hidden space-y-6">
+            
+            <div class="bg-white/95 backdrop-blur-md rounded-3xl p-6 shadow-md border-3 border-sky-300">
+                <div class="flex items-center gap-3">
+                    <span class="text-3xl">🔬</span>
+                    <div>
+                        <h2 class="kids-heading text-xl md:text-2xl font-bold text-sky-800">مُخْتَبَرُ اخْتِبَارِ الكَلِمَةِ الأُولَى</h2>
+                        <p class="text-slate-600 text-sm md:text-base font-semibold mt-1">
+                            جَرِّبْ كَلِمَتَكَ الْمُفَضَّلَةَ وَاكْتَشِفْ هَلْ تَقْبَلُ «الـ» التَّعْرِيفِ وَالتَّنْوِينَ!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white/95 backdrop-blur-md rounded-3xl p-6 md:p-8 shadow-xl border-4 border-sky-200 max-w-2xl mx-auto space-y-6">
+                
+                <div>
+                    <label class="block text-base font-bold text-slate-800 mb-3">
+                        👇 اخْتَرْ كَلِمَةً جَاهِزَةً أَوْ اكْتُبْ كَلِمَتَكَ فِي الصُّنْدُوقِ:
+                    </label>
+                    <div class="flex flex-wrap gap-2.5">
+                        <button onclick="testWordDirect('كَتَبَ')" class="btn-press px-4 py-1.5 bg-amber-100 hover:bg-amber-200 text-amber-900 font-bold text-sm rounded-2xl border-2 border-amber-300">كَتَبَ</button>
+                        <button onclick="testWordDirect('المُعَلِّمُ')" class="btn-press px-4 py-1.5 bg-amber-100 hover:bg-amber-200 text-amber-900 font-bold text-sm rounded-2xl border-2 border-amber-300">المُعَلِّمُ</button>
+                        <button onclick="testWordDirect('يَلْعَبُ')" class="btn-press px-4 py-1.5 bg-amber-100 hover:bg-amber-200 text-amber-900 font-bold text-sm rounded-2xl border-2 border-amber-300">يَلْعَبُ</button>
+                        <button onclick="testWordDirect('زَهْرَةٌ')" class="btn-press px-4 py-1.5 bg-amber-100 hover:bg-amber-200 text-amber-900 font-bold text-sm rounded-2xl border-2 border-amber-300">زَهْرَةٌ</button>
+                        <button onclick="testWordDirect('نَامَ')" class="btn-press px-4 py-1.5 bg-amber-100 hover:bg-amber-200 text-amber-900 font-bold text-sm rounded-2xl border-2 border-amber-300">نَامَ</button>
+                    </div>
+                </div>
+
+                <div class="flex gap-2">
+                    <input type="text" id="custom-word-input" placeholder="اُكْتُبْ كَلِمَةً هُنَا مِثْلَ: يَرْسُمُ..." class="flex-grow border-3 border-sky-200 rounded-2xl px-4 py-3 text-lg font-bold focus:outline-none focus:border-sky-500 shadow-inner">
+                    <button onclick="runWordTest()" class="btn-press bg-sky-600 hover:bg-sky-700 text-white font-black px-6 py-3 rounded-2xl shadow-md transition-all text-base">
+                        اِخْتَبِرِ الآنَ! 🚀
+                    </button>
+                </div>
+
+                <!-- Test Result Container -->
+                <div id="test-result-box" class="hidden bg-sky-50/70 rounded-3xl p-6 border-3 border-sky-300 space-y-4">
+                    <div class="flex items-center justify-between border-b-2 border-sky-200 pb-3">
+                        <span class="text-sm md:text-base font-bold text-slate-600">الكَلِمَةُ الَّتِي اخْتَبَرْتَهَا:</span>
+                        <span id="res-word" class="text-2xl font-black text-sky-800">---</span>
+                    </div>
+
+                    <div class="space-y-3 font-bold text-sm md:text-base">
+                        <div id="check-al" class="flex items-center justify-between p-3 rounded-2xl">
+                            <span>تَجْرِبَةُ قَبُولِ «الـ» التَّعْرِيفِ:</span>
+                            <span id="res-al-status" class="font-extrabold">---</span>
+                        </div>
+                        <div id="check-tanween" class="flex items-center justify-between p-3 rounded-2xl">
+                            <span>تَجْرِبَةُ قَبُولِ التَّنْوِينِ:</span>
+                            <span id="res-tanween-status" class="font-extrabold">---</span>
+                        </div>
+                    </div>
+
+                    <div id="final-type-badge" class="p-4 text-center rounded-2xl font-black text-xl mt-4 shadow-sm">
+                        --
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ==================== TAB 3: SENTENCE CONVERTER ==================== -->
+        <section id="sec-converter" class="hidden space-y-6">
+            
+            <div class="bg-white/95 backdrop-blur-md rounded-3xl p-6 shadow-md border-3 border-emerald-300">
+                <div class="flex items-center gap-3">
+                    <span class="text-3xl">🔄</span>
+                    <div>
+                        <h2 class="kids-heading text-xl md:text-2xl font-bold text-emerald-800">مُحَوِّلُ الجُمَلِ السِّحْرِيُّ</h2>
+                        <p class="text-slate-600 text-sm md:text-base font-semibold mt-1">
+                            اِضْغَطْ عَلَى الزِّرِّ وَشَاهِدْ كَيْفَ نُحَوِّلُ الجُمْلَةَ الفِعْلِيَّةَ إِلَى جُمْلَةٍ اسْمِيَّةٍ وَالعَكْسَ!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Example 1 Converter -->
+                <div id="converter-card-1" class="interactive-card bg-white/95 backdrop-blur-md p-6 rounded-3xl shadow-xl border-4 border-amber-300 flex flex-col justify-between space-y-6">
+                    <div>
+                        <span class="bg-amber-100 text-amber-900 text-xs font-black px-3 py-1 rounded-full border border-amber-200">
+                            🌟 تَحَدِّي التَّحْوِيلِ 1
+                        </span>
+                        
+                        <div class="my-6 p-4 bg-amber-50/50 rounded-2xl border-2 border-dashed border-amber-200 text-center flex flex-wrap items-center justify-center gap-2">
+                            <span id="sent-1-verb" class="text-2xl md:text-3xl font-black text-blue-600 px-3 py-1 bg-blue-100 rounded-xl shadow-sm">أَكَلَ</span>
+                            <span id="sent-1-noun" class="text-2xl md:text-3xl font-black text-emerald-600 px-3 py-1 bg-emerald-100 rounded-xl shadow-sm">الطِّفْلُ</span>
+                            <span class="text-2xl md:text-3xl font-bold text-slate-700">تُفَّاحَةً شَهِيَّةً.</span>
+                        </div>
+
+                        <div class="text-center">
+                            <span id="type-badge-1" class="bg-blue-100 text-blue-800 text-sm font-black px-4 py-2 rounded-2xl border border-blue-200 inline-block shadow-sm">
+                                نَوْعُ الجُمْلَةِ الحَالِي: جُمْلَةٌ فِعْلِيَّةٌ 🏃‍♂️
+                            </span>
+                        </div>
+                    </div>
+
+                    <button onclick="toggleTransform(1)" class="btn-press w-full bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 text-white font-black py-3 rounded-2xl transition-all shadow-md text-base">
+                        🔄 حَوِّلِ الجُمْلَةَ الآنَ!
+                    </button>
+                </div>
+
+                <!-- Example 2 Converter -->
+                <div id="converter-card-2" class="interactive-card bg-white/95 backdrop-blur-md p-6 rounded-3xl shadow-xl border-4 border-amber-300 flex flex-col justify-between space-y-6">
+                    <div>
+                        <span class="bg-amber-100 text-amber-900 text-xs font-black px-3 py-1 rounded-full border border-amber-200">
+                            🌟 تَحَدِّي التَّحْوِيلِ 2
+                        </span>
+                        
+                        <div class="my-6 p-4 bg-amber-50/50 rounded-2xl border-2 border-dashed border-amber-200 text-center flex flex-wrap items-center justify-center gap-2">
+                            <span id="sent-2-verb" class="text-2xl md:text-3xl font-black text-blue-600 px-3 py-1 bg-blue-100 rounded-xl shadow-sm">تَعْزِفُ</span>
+                            <span id="sent-2-noun" class="text-2xl md:text-3xl font-black text-emerald-600 px-3 py-1 bg-emerald-100 rounded-xl shadow-sm">سَلْمَى</span>
+                            <span class="text-2xl md:text-3xl font-bold text-slate-700">لَحْنًا جَمِيلًا.</span>
+                        </div>
+
+                        <div class="text-center">
+                            <span id="type-badge-2" class="bg-blue-100 text-blue-800 text-sm font-black px-4 py-2 rounded-2xl border border-blue-200 inline-block shadow-sm">
+                                نَوْعُ الجُمْلَةِ الحَالِي: جُمْلَةٌ فِعْلِيَّةٌ 🏃‍♂️
+                            </span>
+                        </div>
+                    </div>
+
+                    <button onclick="toggleTransform(2)" class="btn-press w-full bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 text-white font-black py-3 rounded-2xl transition-all shadow-md text-base">
+                        🔄 حَوِّلِ الجُمْلَةَ الآنَ!
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ==================== TAB 4: QUIZ & STATS ==================== -->
+        <section id="sec-quiz" class="hidden space-y-6">
+            
+            <div class="bg-white/95 backdrop-blur-md rounded-3xl p-6 shadow-md border-3 border-rose-300">
+                <div class="flex items-center gap-3">
+                    <span class="text-3xl">🏆</span>
+                    <div>
+                        <h2 class="kids-heading text-xl md:text-2xl font-bold text-rose-800">تَحَدِّي الأَبْطَالِ التَّفَاعُلِيُّ</h2>
+                        <p class="text-slate-600 text-sm md:text-base font-semibold mt-1">
+                            أَجِبْ عَنِ الأَسْئِلَةِ وَتَابِعْ تَقَدُّمَكَ فِي لَوْحَةِ النَّجَاحِ!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                
+                <!-- Main Quiz Box -->
+                <div class="lg:col-span-2 bg-white/95 backdrop-blur-md rounded-3xl p-6 md:p-8 shadow-xl border-4 border-amber-300">
+                    <div class="flex items-center justify-between mb-6 pb-3 border-b-2 border-amber-100">
+                        <span class="text-base font-bold text-slate-600" id="quiz-progress-text">السُّؤَالُ 1 مِنْ 4</span>
+                        <span class="text-sm bg-amber-400 text-amber-950 font-black px-4 py-1 rounded-full shadow-sm" id="quiz-score-badge">النقاط: 0 ⭐</span>
+                    </div>
+
+                    <div id="quiz-box" class="space-y-6">
+                        <div class="bg-amber-50/70 p-6 rounded-3xl text-center border-2 border-amber-200 shadow-inner">
+                            <p class="text-sm text-amber-800 font-bold mb-2">مَا هُوَ نَوْعُ هَذِهِ الجُمْلَةِ؟</p>
+                            <h3 id="quiz-question-text" class="kids-heading text-2xl md:text-3xl font-extrabold text-slate-800 leading-snug">
+                                فَتَحَ الحَارِسُ بَابَ المَدْرَسَةِ.
+                            </h3>
+                        </div>
+
+                        <!-- Answer Choices -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <button onclick="submitAnswer('فعليّة')" class="btn-press p-4 rounded-2xl border-3 border-blue-300 hover:border-blue-500 bg-blue-50 hover:bg-blue-100 font-black text-blue-900 text-lg transition-all flex items-center justify-center gap-2 shadow-sm">
+                                <span>🏃‍♂️</span> جُمْلَةٌ فِعْلِيَّةٌ
+                            </button>
+                            <button onclick="submitAnswer('اسميّة')" class="btn-press p-4 rounded-2xl border-3 border-emerald-300 hover:border-emerald-500 bg-emerald-50 hover:bg-emerald-100 font-black text-emerald-900 text-lg transition-all flex items-center justify-center gap-2 shadow-sm">
+                                <span>🏫</span> جُمْلَةٌ اسْمِيَّةٌ
+                            </button>
+                        </div>
+
+                        <!-- Feedback Box -->
+                        <div id="quiz-feedback" class="hidden p-4 rounded-2xl text-center font-black text-base md:text-lg shadow-sm"></div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t-2 border-slate-100 flex justify-end">
+                        <button onclick="resetQuiz()" class="btn-press text-sm text-slate-500 hover:text-amber-700 font-bold underline flex items-center gap-1">
+                            🔄 إِعَادَةُ التَّمَارِينِ مِنَ البِدَايَةِ
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Scoreboard & Success Card -->
+                <div class="bg-white/95 backdrop-blur-md rounded-3xl p-6 shadow-xl border-4 border-sky-300 flex flex-col justify-between space-y-4">
+                    <h3 class="kids-heading text-lg font-bold text-sky-800 text-center">
+                        📊 لَوْحَةُ النَّجَاحِ وَالتَّفَوُّقِ
+                    </h3>
+
+                    <div class="space-y-3">
+                        <div class="p-3.5 bg-emerald-50 border-2 border-emerald-200 rounded-2xl flex justify-between items-center font-bold">
+                            <span class="text-emerald-800">إِجَابَاتٌ صَحِيحَةٌ 🌟:</span>
+                            <span id="stat-correct" class="text-xl font-black text-emerald-600">0</span>
+                        </div>
+                        <div class="p-3.5 bg-rose-50 border-2 border-rose-200 rounded-2xl flex justify-between items-center font-bold">
+                            <span class="text-rose-800">إِجَابَاتٌ خَاطِئَةٌ 💡:</span>
+                            <span id="stat-wrong" class="text-xl font-black text-rose-600">0</span>
+                        </div>
+                        <div class="p-3.5 bg-slate-50 border-2 border-slate-200 rounded-2xl flex justify-between items-center font-bold">
+                            <span class="text-slate-700">مُتَبَقِّي ⏳:</span>
+                            <span id="stat-remaining" class="text-xl font-black text-slate-500">4</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-sky-50 p-4 rounded-2xl border-2 border-sky-200 text-center shadow-inner">
+                        <p class="text-sm text-sky-900 font-bold" id="quiz-status-msg">
+                            أَجِبْ عَنِ الأَسْئِلَةِ لِرُؤْيَةِ نَتَائِجِكَ الرَّائِعَةِ! 🌟
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Kid-Friendly Footer -->
+    <footer class="relative z-10 bg-white/85 backdrop-blur-md border-t-2 border-amber-200 py-4 text-center text-xs md:text-sm text-slate-600 font-semibold mt-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <p>🌟 دَرْسُ قَوَاعِدِ الجُمْلَةُ الاسْمِيَّةُ وَالجُمْلَةُ الفِعْلِيَّةُ - قناة صاحب القول 🇹🇳</p>
+        </div>
+    </footer>
+
+    <script>
+        // Tab Switcher
+        function switchTab(tabId) {
+            const tabs = ['rules', 'tester', 'converter', 'quiz'];
+            const colors = {
+                'rules': 'bg-amber-500 text-white border-amber-600',
+                'tester': 'bg-sky-600 text-white border-sky-700',
+                'converter': 'bg-emerald-600 text-white border-emerald-700',
+                'quiz': 'bg-rose-600 text-white border-rose-700'
+            };
+
+            tabs.forEach(id => {
+                document.getElementById('sec-' + id).classList.add('hidden');
+                const btn = document.getElementById('tab-' + id);
+                btn.className = "btn-press px-4 py-2 rounded-2xl bg-white text-slate-700 hover:bg-slate-50 border-2 border-slate-200 transition-all font-bold";
+            });
+
+            document.getElementById('sec-' + tabId).classList.remove('hidden');
+            const activeBtn = document.getElementById('tab-' + tabId);
+            activeBtn.className = `btn-press px-4 py-2 rounded-2xl ${colors[tabId]} shadow-md border-2 transition-all font-bold`;
+        }
+
+        // Word Tester Dictionary & Evaluation
+        const dictionary = {
+            'يَرْسُمُ': { type: 'فعل', al: false, tanween: false, reason: 'فِعْلٌ مُضَارِعٌ يَدُلُّ عَلَى الرَّسْمِ وَالحَرَكَةِ فِي الحَاضِرِ، وَلاَ يَقْبَلُ «الـ» أَوْ التَّنْوِينَ.' },
+            'يَرْسُم': { type: 'فعل', al: false, tanween: false, reason: 'فِعْلٌ مُضَارِعٌ يَدُلُّ عَلَى عَمَلِ الرَّسْمِ.' },
+            'كَتَبَ': { type: 'فعل', al: false, tanween: false, reason: 'يَدُلُّ عَلَى حَرَكَةٍ وَعَمَلٍ فِي المَاضِي وَلاَ يَقْبَلُ «الـ» أَوْ التَّنْوِينَ.' },
+            'المُعَلِّمُ': { type: 'اسم', al: true, tanween: false, reason: 'يَبْدَأُ بِـ «الـ» التَّعْرِيفِ وَيَدُلُّ عَلَى إِنْسَانٍ.' },
+            'يَلْعَبُ': { type: 'فعل', al: false, tanween: false, reason: 'فِعْلٌ مُضَارِعٌ يَدُلُّ عَلَى عَمَلٍ يَحْدُثُ الآنَ.' },
+            'زَهْرَةٌ': { type: 'اسم', al: true, tanween: true, reason: 'مُنَوَّنٌ وَيَقْبَلُ «الـ» التَّعْرِيفِ (الزَّهْرَةُ).' },
+            'نَامَ': { type: 'فعل', al: false, tanween: false, reason: 'فِعْلٌ مَاضٍ لاَ يَقْبَلُ عَلاَمَاتِ الأَسْمَاءِ.' },
+            'الحَدِيقَةُ': { type: 'اسم', al: true, tanween: false, reason: 'اسْمٌ مَعْرِفَةٌ يَبْدَأُ بِـ «الـ».' },
+            'القِطُّ': { type: 'اسم', al: true, tanween: false, reason: 'اسْمُ حَيَوَانٍ مَعْرُوفٍ يَقْبَلُ «الـ».' },
+            'يُسَاعِدُ': { type: 'فعل', al: false, tanween: false, reason: 'فِعْلٌ مُضَارِعٌ يَدُلُّ عَلَى المُسَاعَدَةِ.' }
+        };
+
+        function testWordDirect(word) {
+            document.getElementById('custom-word-input').value = word;
+            runWordTest();
+        }
+
+        function runWordTest() {
+            const input = document.getElementById('custom-word-input').value.trim();
+            if(!input) return;
+
+            const box = document.getElementById('test-result-box');
+            box.classList.remove('hidden');
+
+            document.getElementById('res-word').textContent = input;
+
+            const entry = dictionary[input];
+            const checkAl = document.getElementById('check-al');
+            const checkTanween = document.getElementById('check-tanween');
+            const resAlStatus = document.getElementById('res-al-status');
+            const resTanweenStatus = document.getElementById('res-tanween-status');
+            const badge = document.getElementById('final-type-badge');
+
+            if(entry) {
+                resAlStatus.textContent = entry.al ? "مَقْبُولٌ ✅" : "مَرْفُوضٌ ❌";
+                checkAl.className = entry.al ? "flex items-center justify-between p-3 rounded-2xl bg-emerald-100 text-emerald-950 font-bold" : "flex items-center justify-between p-3 rounded-2xl bg-rose-100 text-rose-950 font-bold";
+
+                resTanweenStatus.textContent = entry.tanween ? "مَقْبُولٌ ✅" : "مَرْفُوضٌ ❌";
+                checkTanween.className = entry.tanween ? "flex items-center justify-between p-3 rounded-2xl bg-emerald-100 text-emerald-950 font-bold" : "flex items-center justify-between p-3 rounded-2xl bg-rose-100 text-rose-950 font-bold";
+
+                if(entry.type === 'اسم') {
+                    badge.className = "p-4 text-center rounded-2xl font-black text-xl mt-4 bg-emerald-500 text-white shadow-md";
+                    badge.textContent = "🎉 النَّتِيجَةُ: هَذِهِ الكَلِمَةُ اسْمٌ! (" + entry.reason + ")";
+                } else {
+                    badge.className = "p-4 text-center rounded-2xl font-black text-xl mt-4 bg-sky-500 text-white shadow-md";
+                    badge.textContent = "🚀 النَّتِيجَةُ: هَذِهِ الكَلِمَةُ فِعْلٌ! (" + entry.reason + ")";
+                }
+            } else {
+                const startsWithAl = input.startsWith("ال") || input.startsWith("الـ");
+                const isNoun = startsWithAl || input.endsWith("ٌ") || input.endsWith("ً") || input.endsWith("ٍ") || input.endsWith("ة");
+
+                resAlStatus.textContent = startsWithAl ? "مَقْبُولٌ ✅" : "غَيْرُ جَازِمٍ";
+                checkAl.className = "flex items-center justify-between p-3 rounded-2xl bg-slate-100 text-slate-800 font-bold";
+
+                resTanweenStatus.textContent = (input.endsWith("ٌ") || input.endsWith("ً") || input.endsWith("ٍ")) ? "مَقْبُولٌ ✅" : "غَيْرُ جَازِمٍ";
+                checkTanween.className = "flex items-center justify-between p-3 rounded-2xl bg-slate-100 text-slate-800 font-bold";
+
+                if(isNoun) {
+                    badge.className = "p-4 text-center rounded-2xl font-black text-xl mt-4 bg-emerald-500 text-white shadow-md";
+                    badge.textContent = "🎉 النَّتِيجَةُ المُرَجَّحَةُ: هَذِهِ الكَلِمَةُ اسْمٌ (تَقْبَلُ عَلاَمَاتِ الأَسْمَاءِ).";
+                } else {
+                    badge.className = "p-4 text-center rounded-2xl font-black text-xl mt-4 bg-sky-500 text-white shadow-md";
+                    badge.textContent = "🚀 النَّتِيجَةُ المُرَجَّحَةُ: هَذِهِ الكَلِمَةُ فِعْلٌ (تَدُلُّ عَلَى حَرَكَةٍ).";
+                }
+            }
+        }
+
+        // Sentence Converter Logic
+        const sentencesState = {
+            1: { isVerbal: true, verb: 'أَكَلَ', noun: 'الطِّفْلُ' },
+            2: { isVerbal: true, verb: 'تَعْزِفُ', noun: 'سَلْمَى' }
+        };
+
+        function toggleTransform(id) {
+            const st = sentencesState[id];
+            st.isVerbal = !st.isVerbal;
+
+            const verbEl = document.getElementById(`sent-${id}-verb`);
+            const nounEl = document.getElementById(`sent-${id}-noun`);
+            const badgeEl = document.getElementById(`type-badge-${id}`);
+
+            if(st.isVerbal) {
+                verbEl.parentNode.insertBefore(verbEl, nounEl);
+                badgeEl.textContent = "نَوْعُ الجُمْلَةِ الحَالِي: جُمْلَةٌ فِعْلِيَّةٌ 🏃‍♂️";
+                badgeEl.className = "bg-blue-100 text-blue-800 text-sm font-black px-4 py-2 rounded-2xl border border-blue-200 inline-block shadow-sm";
+            } else {
+                verbEl.parentNode.insertBefore(nounEl, verbEl);
+                badgeEl.textContent = "نَوْعُ الجُمْلَةِ الحَالِي: جُمْلَةٌ اسْمِيَّةٌ 🏫";
+                badgeEl.className = "bg-emerald-100 text-emerald-800 text-sm font-black px-4 py-2 rounded-2xl border border-emerald-200 inline-block shadow-sm";
+            }
+        }
+
+        // Quiz Logic
+        const quizData = [
+            { text: "فَتَحَ الحَارِسُ بَابَ المَدْرَسَةِ.", answer: "فعليّة", explain: "بَدَأَتْ بِالفِعْلِ (فَتَحَ)." },
+            { text: "الحَدِيقَةُ مُزْهِرَةٌ بِالوُرُودِ.", answer: "اسميّة", explain: "بَدَأَتْ بِالاسْمِ المَعْرِفَةِ (الحَدِيقَةُ)." },
+            { text: "يُسَاعِدُ أَحْمَدُ أُمَّهُ فِي المَطْبَخِ.", answer: "فعليّة", explain: "بَدَأَتْ بِالفِعْلِ المُضَارِعِ (يُسَاعِدُ)." },
+            { text: "القِطُّ نَائِمٌ تَحْتَ الطَّاوِلَةِ.", answer: "اسميّة", explain: "بَدَأَتْ بِالاسْمِ (القِطُّ)." }
+        ];
+
+        let currentQIndex = 0;
+        let correctCount = 0;
+        let wrongCount = 0;
+
+        function updateQuizUI() {
+            if(currentQIndex >= quizData.length) {
+                document.getElementById('quiz-box').innerHTML = `
+                    <div class="text-center py-8 space-y-4">
+                        <span class="text-6xl floating-element inline-block">🎉</span>
+                        <h3 class="kids-heading text-2xl md:text-3xl font-black text-emerald-700">أَحْسَنْتَ يَا بَطَلَ السَّنَةِ الثَّالِثَةِ!</h3>
+                        <p class="text-slate-700 text-lg font-bold">لَقَدْ أَكْمَلْتَ جَمِيعَ التَّمَارِينِ بِنَجَاحٍ! ⭐</p>
+                        <div class="bg-amber-100 text-amber-900 font-black text-xl px-6 py-3 rounded-2xl inline-block border-2 border-amber-300">
+                            نَتِيجَتُكَ: ${correctCount} مِنْ ${quizData.length}
+                        </div>
+                    </div>
+                `;
+                document.getElementById('quiz-status-msg').textContent = `رَائِعٌ جِدًّاً! أَكْمَلْتَ التَّحَدِّي بِنَجَاحٍ! 🏆`;
+                return;
+            }
+
+            const q = quizData[currentQIndex];
+            document.getElementById('quiz-question-text').textContent = q.text;
+            document.getElementById('quiz-progress-text').textContent = `السُّؤَالُ ${currentQIndex + 1} مِنْ ${quizData.length}`;
+            document.getElementById('quiz-score-badge').textContent = `النقاط: ${correctCount * 10} ⭐`;
+            document.getElementById('quiz-feedback').className = "hidden p-4 rounded-2xl text-center font-black text-base md:text-lg shadow-sm";
+        }
+
+        function submitAnswer(userChoice) {
+            const q = quizData[currentQIndex];
+            const feedbackEl = document.getElementById('quiz-feedback');
+            feedbackEl.classList.remove('hidden');
+
+            if(userChoice === q.answer) {
+                correctCount++;
+                feedbackEl.className = "p-4 rounded-2xl text-center font-black text-base md:text-lg bg-emerald-500 text-white shadow-md";
+                feedbackEl.textContent = `🎉 مُمْتَازٌ وَصَحِيحٌ! (${q.explain})`;
+            } else {
+                wrongCount++;
+                feedbackEl.className = "p-4 rounded-2xl text-center font-black text-base md:text-lg bg-rose-500 text-white shadow-md";
+                feedbackEl.textContent = `💡 حَاوِلْ مَرَّةً أُخْرَى! الصَّوَابُ أَنَّهَا جُمْلَةٌ ${q.answer} لِأَنَّهَا ${q.explain}`;
+            }
+
+            const remaining = quizData.length - (correctCount + wrongCount);
+            document.getElementById('stat-correct').textContent = correctCount;
+            document.getElementById('stat-wrong').textContent = wrongCount;
+            document.getElementById('stat-remaining').textContent = remaining;
+
+            document.getElementById('quiz-status-msg').textContent = `صَحِيحَةٌ: ${correctCount} | خَاطِئَةٌ: ${wrongCount} ⭐`;
+
+            setTimeout(() => {
+                currentQIndex++;
+                updateQuizUI();
+            }, 2000);
+        }
+
+        function resetQuiz() {
+            currentQIndex = 0;
+            correctCount = 0;
+            wrongCount = 0;
+
+            document.getElementById('stat-correct').textContent = '0';
+            document.getElementById('stat-wrong').textContent = '0';
+            document.getElementById('stat-remaining').textContent = quizData.length;
+            
+            document.getElementById('quiz-box').innerHTML = `
+                <div class="bg-amber-50/70 p-6 rounded-3xl text-center border-2 border-amber-200 shadow-inner">
+                    <p class="text-sm text-amber-800 font-bold mb-2">مَا هُوَ نَوْعُ هَذِهِ الجُمْلَةِ؟</p>
+                    <h3 id="quiz-question-text" class="kids-heading text-2xl md:text-3xl font-extrabold text-slate-800 leading-snug"></h3>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <button onclick="submitAnswer('فعليّة')" class="btn-press p-4 rounded-2xl border-3 border-blue-300 hover:border-blue-500 bg-blue-50 hover:bg-blue-100 font-black text-blue-900 text-lg transition-all flex items-center justify-center gap-2 shadow-sm">
+                        <span>🏃‍♂️</span> جُمْلَةٌ فِعْلِيَّةٌ
+                    </button>
+                    <button onclick="submitAnswer('اسميّة')" class="btn-press p-4 rounded-2xl border-3 border-emerald-300 hover:border-emerald-500 bg-emerald-50 hover:bg-emerald-100 font-black text-emerald-900 text-lg transition-all flex items-center justify-center gap-2 shadow-sm">
+                        <span>🏫</span> جُمْلَةٌ اسْمِيَّةٌ
+                    </button>
+                </div>
+
+                <div id="quiz-feedback" class="hidden p-4 rounded-2xl text-center font-black text-base md:text-lg shadow-sm"></div>
+            `;
+
+            document.getElementById('quiz-status-msg').textContent = "أَجِبْ عَنِ الأَسْئِلَةِ لِرُؤْيَةِ نَتَائِجِكَ الرَّائِعَةِ! 🌟";
+            updateQuizUI();
+        }
+
+        window.onload = function() {
+            updateQuizUI();
+        };
+    </script>
+</body>
+</html>

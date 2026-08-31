@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>براعم النور - العدد الرابع عشر</title>
+<meta property="og:title" content="براعم النور - العدد الرابع عشر - قيمة التفاؤل">
+<meta property="og:description" content="مجلة الأطفال المشرقة - قصة، ألعاب، وأنشطة عن قيمة التفاؤل">
+<meta property="og:image" content="https://saheb-el-kawl-media.github.io/baraem-alnour/og_tafaoul.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://saheb-el-kawl-media.github.io/baraem-alnour/tafaoul.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="براعم النور - العدد الرابع عشر - قيمة التفاؤل">
+<meta name="twitter:description" content="مجلة الأطفال المشرقة - قصة، ألعاب، وأنشطة عن قيمة التفاؤل">
+<meta name="twitter:image" content="https://saheb-el-kawl-media.github.io/baraem-alnour/og_tafaoul.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marhey:wght@500;600;700&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sun:#FFC93C;
+    --coral:#FF6B5B;
+    --teal:#0F8B8D;
+    --grape:#6C4AB6;
+    --cream:#FFF8EC;
+    --ink:#2B2118;
+    --leaf:#4CAF6D;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:#DCEFE9;font-family:'Tajawal',sans-serif;color:var(--ink);}
+
+  .toolbar{
+    position:sticky;top:0;z-index:50;
+    background:var(--ink);color:var(--cream);
+    display:flex;align-items:center;justify-content:center;gap:14px;
+    padding:10px 16px;font-family:'Tajawal',sans-serif;font-weight:700;font-size:14px;
+  }
+  .toolbar button{
+    background:var(--sun);color:var(--ink);border:none;border-radius:999px;
+    padding:8px 18px;font-weight:900;font-size:14px;cursor:pointer;font-family:'Tajawal',sans-serif;
+  }
+  .toolbar span{opacity:.8;font-weight:400;}
+
+  .stage{
+    display:flex;flex-direction:column;align-items:center;gap:28px;
+    padding:28px 12px 60px;
+  }
+
+  .page{
+    position:relative;
+    width:210mm;height:297mm;
+    background:var(--cream);
+    box-shadow:0 8px 30px rgba(0,0,0,.18);
+    overflow:hidden;
+    flex-shrink:0;
+  }
+
+  .page-num{
+    position:absolute;bottom:10mm;
+    width:14mm;height:14mm;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Marhey',sans-serif;font-weight:700;font-size:16px;color:#fff;
+  }
+
+  h1,h2,h3,.disp{font-family:'Marhey',sans-serif;}
+
+  /* ---------- COVER ---------- */
+  .cover{
+    background:linear-gradient(180deg,#FFDE7A 0%, var(--sun) 38%, #FFB13C 100%);
+    display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
+    text-align:center;
+  }
+  .cover .sunburst{
+    position:absolute;top:-90mm;left:50%;transform:translateX(-50%);
+    width:260mm;height:260mm;border-radius:50%;
+    background:repeating-conic-gradient(#FFE8A3 0deg 9deg, transparent 9deg 18deg);
+    opacity:.55;
+  }
+  .cover .masthead{
+    margin-top:20mm;font-size:64px;font-weight:700;color:var(--ink);
+    letter-spacing:1px; z-index:2; text-shadow:3px 3px 0 #fff;
+  }
+  .cover .tagline{
+    z-index:2;font-family:'Tajawal',sans-serif;font-weight:700;font-size:17px;
+    background:var(--coral);color:#fff;padding:6px 22px;border-radius:999px;margin-top:4mm;
+  }
+  .cover .issue-badge{
+    z-index:2;margin-top:10mm;background:var(--teal);color:#fff;font-family:'Marhey';
+    font-weight:700;font-size:20px;padding:10px 26px;border-radius:16px;
+    transform:rotate(-3deg);box-shadow:0 6px 0 #0a5d5e;
+  }
+  .cover .scene{
+    z-index:2;margin-top:14mm;width:150mm;
+  }
+  .cover .cover-caption{
+    z-index:2;margin-top:8mm;font-weight:700;color:var(--ink);font-size:15px;
+    background:#fff;padding:8px 20px;border-radius:14px;border:3px dashed var(--grape);
+  }
+  .cover .strip{
+    position:absolute;bottom:0;left:0;right:0;height:22mm;background:var(--grape);
+    display:flex;align-items:center;justify-content:space-around;color:#fff;
+    font-weight:700;font-size:13px;font-family:'Tajawal',sans-serif;
+  }
+  .cover .strip div{display:flex;align-items:center;gap:6px;}
+
+  /* ---------- generic inner page chrome ---------- */
+  .inner{padding:16mm 18mm 20mm;height:100%;position:relative;}
+  .kicker{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--coral);color:#fff;font-weight:800;font-size:13px;
+    padding:5px 16px;border-radius:999px;font-family:'Marhey';
+  }
+  .headline{font-size:34px;font-weight:700;color:var(--teal);margin:8px 0 2mm;}
+  .rule{height:5px;border-radius:4px;background:repeating-linear-gradient(90deg,var(--sun) 0 10px, var(--coral) 10px 20px);width:60mm;margin-bottom:8mm;}
+
+  /* ---------- welcome / TOC page ---------- */
+  .welcome-box{
+    background:#fff;border-radius:20px;padding:8mm 10mm;border:3px solid var(--sun);
+    font-size:14.5px;line-height:2.1;margin-bottom:8mm;position:relative;
+  }
+  .welcome-box:before{
+    content:"";position:absolute;top:-6mm;right:10mm;width:12mm;height:12mm;
+    background:var(--coral);border-radius:50%;
+  }
+  .toc-grid{display:grid;grid-template-columns:1fr 1fr;gap:6mm;}
+  .toc-item{
+    background:#fff;border-radius:16px;padding:6mm;display:flex;gap:4mm;align-items:flex-start;
+    box-shadow:0 4px 0 rgba(0,0,0,.08);
+  }
+  .toc-num{
+    min-width:11mm;height:11mm;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-family:'Marhey';font-weight:700;color:#fff;font-size:15px;flex-shrink:0;
+  }
+  .toc-item h4{margin:0 0 2px;font-size:15.5px;font-family:'Marhey';}
+  .toc-item p{margin:0;font-size:12px;color:#5a4f42;line-height:1.6;}
+
+  /* ---------- story pages ---------- */
+  .story-page{background:#FFF3E0;}
+  .story-text{font-size:15.5px;line-height:2.15;column-gap:8mm;}
+  .story-text p{margin:0 0 4mm;}
+  .story-text .cap{
+    font-family:'Marhey';color:var(--coral);font-weight:700;
+  }
+  .speech{
+    background:#fff;border:3px solid var(--teal);border-radius:18px;padding:5mm 7mm;
+    font-size:14px;font-weight:700;position:relative;margin:5mm 0;color:var(--teal);
+  }
+  .speech:after{
+    content:"";position:absolute;bottom:-8mm;right:14mm;border:8mm solid transparent;
+    border-top-color:#fff;
+  }
+  .scene-panel{width:100%;border-radius:18px;overflow:hidden;margin:6mm 0;border:4px solid #fff;box-shadow:0 4px 14px rgba(0,0,0,.12);}
+
+  /* ---------- values reflection page ---------- */
+  .value-card{
+    background:#fff;border-radius:20px;padding:7mm 9mm;margin-bottom:6mm;
+    border-right:8px solid var(--grape);
+  }
+  .value-card h3{margin:0 0 3mm;font-size:18px;color:var(--grape);}
+  .value-card p{margin:0;font-size:14px;line-height:1.9;}
+  .qbox{
+    background:var(--teal);color:#fff;border-radius:16px;padding:6mm 8mm;font-size:14px;line-height:2;font-weight:700;
+  }
+  .qbox .qnum{
+    display:inline-flex;width:8mm;height:8mm;border-radius:50%;background:var(--sun);color:var(--ink);
+    align-items:center;justify-content:center;font-family:'Marhey';margin-left:6px;font-size:13px;
+  }
+  .line-write{border-bottom:2px dotted #ffffffaa;display:inline-block;min-width:70%;margin-right:4px;}
+
+  /* ---------- activity page ---------- */
+  .activity-section{background:#fff;border-radius:18px;padding:6mm 8mm;margin-bottom:6mm;}
+  .activity-section h3{color:var(--coral);margin:0 0 4mm;font-size:17px;}
+  .match-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:5mm;font-size:14px;}
+  .match-pill{
+    background:var(--sun);border-radius:999px;padding:5px 14px;font-weight:700;min-width:32mm;text-align:center;
+  }
+  .match-pill.b{background:#E7F5EC;}
+  .dots{flex:1;border-bottom:2px dotted #b9ac96;margin:0 4mm;}
+  .scenario{
+    background:#FDF1E7;border-radius:14px;padding:5mm 6mm;margin-bottom:4mm;font-size:13.5px;line-height:1.9;
+  }
+  .scenario b{color:var(--teal);}
+  .choice{display:inline-flex;align-items:center;gap:5px;margin-left:10mm;font-weight:700;}
+  .circle{width:5mm;height:5mm;border:2.5px solid var(--ink);border-radius:50%;display:inline-block;}
+
+  /* ---------- coloring page ---------- */
+  .color-page{background:#fff;}
+  .color-frame{
+    border:5px dashed var(--coral);border-radius:22px;height:210mm;display:flex;align-items:center;justify-content:center;
+  }
+
+  /* ---------- back page ---------- */
+  .fact-card{
+    background:#fff;border-radius:20px;padding:7mm 9mm;margin-bottom:6mm;border:3px solid var(--sun);
+    display:flex;gap:6mm;align-items:center;
+  }
+  .fact-card p{margin:0;font-size:13.5px;line-height:1.9;}
+  .signoff{
+    background:var(--grape);color:#fff;border-radius:20px;padding:8mm;text-align:center;
+  }
+  .signoff h3{margin:0 0 4mm;font-size:22px;}
+  .signoff .sig-line{border-bottom:2px solid #fff;display:inline-block;width:60mm;margin:0 3mm;}
+  .next-issue{
+    margin-top:6mm;background:var(--teal);color:#fff;border-radius:16px;padding:5mm 7mm;font-size:13px;
+    display:flex;justify-content:space-between;align-items:center;font-weight:700;
+  }
+
+  @media print{
+    body{background:#fff;}
+    .toolbar{display:none;}
+    .stage{padding:0;gap:0;}
+    .page{box-shadow:none;margin:0;}
+    @page{size:A4;margin:0;}
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <span>مجلة براعم النور — جاهزة للقراءة والطباعة</span>
+  <button onclick="window.print()">🖨️ اطبع المجلة (A4)</button>
+</div>
+
+<div class="stage">
+
+  <!-- ============ PAGE 1 — COVER ============ -->
+  <div class="page cover">
+    <div class="sunburst"></div>
+    <div class="masthead">براعم النور</div>
+    <div class="tagline">مجلة الأطفال المشرقة ✨</div>
+    <div class="issue-badge">العدد الرابع عشر · قيمة التفاؤل</div>
+
+    <img class="scene" src="tafaoul_cover.jpg" alt="عائلة نور تحت الخيمة" style="z-index:2;width:150mm;border-radius:24px;box-shadow:0 10px 30px rgba(0,0,0,.25);border:5px solid #fff;">
+
+        <div class="cover-caption">"وراء كل غيمة، شمس مستنيّة 🌈" — قصة هذا العدد</div>
+
+    <svg class="brand-seal" viewBox="0 0 200 200" style="width:24mm;z-index:2;margin-top:14mm;filter:drop-shadow(0 3px 5px rgba(0,0,0,.22));">
+      <circle cx="100" cy="100" r="96" fill="#1A1A1A"/>
+      <circle cx="100" cy="100" r="88" fill="none" stroke="#D4AF37" stroke-width="3"/>
+      <circle cx="100" cy="100" r="78" fill="none" stroke="#D4AF37" stroke-width="3"/>
+      <g fill="#D4AF37">
+        <circle cx="100" cy="14" r="4"/>
+        <circle cx="141" cy="24" r="4"/>
+        <circle cx="172" cy="55" r="4"/>
+        <circle cx="184" cy="100" r="4"/>
+        <circle cx="172" cy="145" r="4"/>
+        <circle cx="141" cy="176" r="4"/>
+        <circle cx="100" cy="186" r="4"/>
+        <circle cx="59" cy="176" r="4"/>
+        <circle cx="28" cy="145" r="4"/>
+        <circle cx="16" cy="100" r="4"/>
+        <circle cx="28" cy="55" r="4"/>
+        <circle cx="59" cy="24" r="4"/>
+      </g>
+      <text x="100" y="93" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="26" letter-spacing="2" fill="#D4AF37">SAHEB</text>
+      <text x="100" y="123" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="26" letter-spacing="2" fill="#D4AF37">EL KAWL</text>
+    </svg>
+
+    <div class="strip">
+      <div>📖 قصة قصيرة</div>
+      <div>💡 ركن القيم</div>
+      <div>🧩 العب وفكّر</div>
+      <div>🎨 لوّن بإبداع</div>
+    </div>
+  </div>
+
+  <!-- ============ PAGE 2 — WELCOME + TOC ============ -->
+  <div class="page">
+    <div class="inner" style="background:linear-gradient(180deg,#FFF8EC,#FFF8EC 70%,#FDEFD8);">
+      <span class="kicker">🌤️ أهلًا بك يا برعم</span>
+      <div class="headline">مرحبًا في عالم براعم النور</div>
+      <div class="rule"></div>
+
+      <div class="welcome-box">
+        أهلًا بك من جديد يا صديقي القارئ 👋<br>
+        في كل عدد من "براعم النور"، نأخذك في رحلة قصيرة حول قيمة جميلة نتعلمها معًا،
+        ونحوّلها إلى قصة، وأسئلة للتفكير، وألعاب ممتعة. عدد هذه المجلة عن قيمة
+        <b style="color:var(--coral)">التفاؤل</b> — لأن الطريقة التي ننظر بها للأمور قد تغيّر يومنا بالكامل. 🌈<br>
+        خُذ قلمك الملوّن، وابدأ رحلتك من الصفحة التالية!
+      </div>
+
+      <div class="toc-grid">
+        <div class="toc-item">
+          <div class="toc-num" style="background:var(--coral);">1</div>
+          <div><h4>📖 مطر يوم النزهة</h4><p>قصة قصيرة عن نور اللي حوّلت يوم ممطر لذكرى جميلة.</p></div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-num" style="background:var(--grape);">2</div>
+          <div><h4>💡 ركن القيم</h4><p>ماذا نتعلّم من القصة؟ وما الفرق بين التفاؤل والتجاهل؟</p></div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-num" style="background:var(--teal);">3</div>
+          <div><h4>🧩 العب وفكّر</h4><p>وصّل الكلمات بمعانيها، واختر القرار الصحيح في كل موقف.</p></div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-num" style="background:var(--sun);color:var(--ink);">4</div>
+          <div><h4>🎨 لوّن بإبداع</h4><p>لوحة كبيرة من قصة العدد بانتظار ألوانك الجميلة.</p></div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-num" style="background:#4CAF6D;">5</div>
+          <div><h4>🌟 هل تعلم؟</h4><p>معلومة ممتعة عن أثر التفاؤل على صحتنا وأجسامنا.</p></div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-num" style="background:#FF9F5A;">6</div>
+          <div><h4>✍️ إلى اللقاء</h4><p>مساحة لك لتكتب قصتك الخاصة، ونلتقي في العدد القادم.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ PAGE 3 — STORY PART 1 ============ -->
+  <div class="page story-page">
+    <div class="inner">
+      <span class="kicker" style="background:var(--teal);">📖 قصة العدد</span>
+      <div class="headline">مطر يوم النزهة</div>
+      <div class="rule" style="background:repeating-linear-gradient(90deg,var(--teal) 0 10px, var(--sun) 10px 20px);"></div>
+
+      <img class="scene-panel" src="tafaoul_story.jpg" alt="نور حزينة أمام نافذة ممطرة" style="width:100%;height:auto;object-fit:cover;max-height:65mm;">
+
+      <div class="story-text">
+        <p><span class="cap">خطّطت</span> <b>نور</b> وعائلتها منذ أسابيع لرحلة نزهة طال انتظارها إلى الحديقة الكبيرة خارج المدينة، مع ألعاب، وطعام لذيذ، ودراجات هوائية. لكن في صباح يوم النزهة بالذات، استيقظت نور على صوت المطر الغزير يضرب النافذة.</p>
+        <p>ركضت نور إلى الشباك وشعرت بخيبة أمل كبيرة وهي ترى السماء الرمادية الملبّدة بالغيوم. جلست على السرير وقالت لنفسها بحزن: "لقد خُرّبت رحلتنا بالكامل... يوم سيّئ من أوله."</p>
+        <div class="speech" style="border-color:var(--coral);color:var(--coral);">أخوها الصغير (يبكي من الغرفة الجانبية): "لن نذهب للنزهة أبدًا! كل شيء سيّئ اليوم!"</div>
+        <p>سمعت نور والدها يدندن أغنية مرحة في المطبخ رغم المطر، فتساءلت في نفسها: كيف يستطيع أن يكون سعيدًا في يوم كهذا؟</p>
+      </div>
+    </div>
+    <div class="page-num" style="right:14mm;background:var(--teal);">3</div>
+  </div>
+
+  <!-- ============ PAGE 4 — STORY PART 2 ============ -->
+  <div class="page story-page">
+    <div class="inner">
+      <span class="kicker" style="background:var(--coral);">📖 تابع القصة</span>
+      <div class="headline" style="color:var(--coral);">يوم آخر ينتظر خلف الغيوم</div>
+      <div class="rule"></div>
+
+      <div class="story-text">
+        <p>نزلت نور إلى المطبخ وسألت والدها: "كيف تكون سعيدًا وقد أفسد المطر رحلتنا؟" ابتسم والدها وقال: "المطر لم يُفسد يومنا يا نور، هو فقط غيّر خططنا. يمكننا أن نحزن على ما فقدناه، أو نبحث عمّا يمكننا فعله بدلًا منه."</p>
+        <div class="speech">الأب: "ما رأيك أن نصنع خيمة كبيرة في الصالة، ونتناول الفطور تحتها وكأننا في نزهة داخلية؟"</div>
+        <p>ترددت نور قليلًا، ثم ابتسمت للمرة الأولى ذلك الصباح. ساعدت أخاها الصغير على مسح دموعه، وقالت له: "هيا بنا نصنع أجمل نزهة داخلية في العالم!"</p>
+        <p>قضت العائلة نهارًا مليئًا بالضحك تحت الخيمة المرتجلة، لعبوا ألعابًا لوحية، وحكى الأب قصصًا مضحكة، وشاهدوا من النافذة قوس قزح ظهر بعد توقف المطر بقليل.</p>
+        <p>في المساء، كتبت نور في دفترها: "اليوم لم يسِر كما خططنا، لكنه كان يومًا جميلًا رغم ذلك. تعلّمت أن التفاؤل لا يعني أن الأمور دائمًا تسير كما نريد، بل أن نجد الجمال حتى عندما تتغيّر خططنا."</p>
+      </div>
+
+      <div style="text-align:center;margin-top:6mm;">
+        <div style="display:inline-block;background:var(--sun);padding:8mm 14mm;border-radius:20px;transform:rotate(-2deg);box-shadow:0 6px 0 #c98f10;">
+          <span style="font-family:'Marhey';font-size:22px;font-weight:700;color:var(--ink);">"وراء كل غيمة، شمس مستنيّة"</span>
+        </div>
+      </div>
+    </div>
+    <div class="page-num" style="right:14mm;background:var(--coral);">4</div>
+  </div>
+
+  <!-- ============ PAGE 5 — VALUES CORNER ============ -->
+  <div class="page">
+    <div class="inner" style="background:#F4EEFB;">
+      <span class="kicker" style="background:var(--grape);">💡 ركن القيم</span>
+      <div class="headline" style="color:var(--grape);">ماذا نتعلّم من القصة؟</div>
+      <div class="rule" style="background:repeating-linear-gradient(90deg,var(--grape) 0 10px, var(--sun) 10px 20px);"></div>
+
+      <div class="value-card">
+        <h3>🌈 التفاؤل</h3>
+        <p>أن ننظر للأمور الصعبة أو غير المتوقعة بأمل، ونبحث عن الجانب الجيد فيها، من غير أن ننكر مشاعرنا الحزينة، بل نسمح لأنفسنا أن نتجاوزها ونجد حلًا أو بديلًا جميلًا.</p>
+      </div>
+      <div class="value-card" style="border-color:var(--teal);">
+        <h3 style="color:var(--teal);">💛 لماذا يهم؟</h3>
+        <p>لم يتجاهل والد نور المطر أو يتظاهر بأنه غير موجود، بل اعترف بالتغيير وبحث عن بديل جميل. التفاؤل الحقيقي هو أن نتقبّل الواقع، ثم نختار كيف نتعامل معه.</p>
+      </div>
+
+      <div class="qbox">
+        هيا نفكّر معًا:<br><br>
+        <span class="qnum">1</span> هل حدث يومًا أن تغيّرت خطة كنت متحمسًا لها؟ كيف تصرّفت؟ <span class="line-write"></span><br><br>
+        <span class="qnum">2</span> ما هو أكثر شيء ساعدك على التفاؤل في موقف صعب؟ <span class="line-write"></span><br><br>
+        <span class="qnum">3</span> اذكر بديلًا ممتعًا يمكن فعله في يوم ممطر داخل البيت. <span class="line-write"></span>
+      </div>
+    </div>
+    <div class="page-num" style="right:14mm;background:var(--grape);">5</div>
+  </div>
+
+  <!-- ============ PAGE 6 — ACTIVITY ============ -->
+  <div class="page">
+    <div class="inner" style="background:#FFF6E9;">
+      <span class="kicker" style="background:var(--sun);color:var(--ink);">🧩 العب وفكّر</span>
+      <div class="headline" style="color:#D98A00;">وقت التحدي!</div>
+      <div class="rule" style="background:repeating-linear-gradient(90deg,var(--sun) 0 10px, var(--coral) 10px 20px);"></div>
+
+      <div class="activity-section">
+        <h3>1) وصّل كل كلمة بمعناها الصحيح</h3>
+        <div class="match-row"><div class="match-pill">تفاؤل</div><div class="dots"></div><div class="match-pill b">البحث عن الجانب الجيد في المواقف الصعبة</div></div>
+        <div class="match-row"><div class="match-pill">تشاؤم</div><div class="dots"></div><div class="match-pill b">توقّع الأسوأ دائمًا من الأمور</div></div>
+        <div class="match-row"><div class="match-pill">بديل</div><div class="dots"></div><div class="match-pill b">خطة أو فكرة جديدة تحل محل الأولى</div></div>
+        <div class="match-row"><div class="match-pill">أمل</div><div class="dots"></div><div class="match-pill b">شعور بالتفاؤل تجاه المستقبل</div></div>
+      </div>
+
+      <div class="activity-section">
+        <h3>2) ماذا تفعل؟ اختر الدائرة الصحيحة</h3>
+        <div class="scenario">
+          <b>الموقف الأول:</b> تدربت لأسابيع على مباراة، وأُلغيت المباراة بسبب الطقس.
+          <br>
+          <span class="choice"><span class="circle"></span> أقول إن كل شيء تعبي ذهب هباءً وأتوقف عن التدريب</span>
+          <span class="choice"><span class="circle"></span> أفكر أن التدريب أفادني، وسأكون مستعدًا للمباراة القادمة</span>
+        </div>
+        <div class="scenario">
+          <b>الموقف الثاني:</b> أخطأت في رسمة كنت تعمل عليها بجهد كبير.
+          <br>
+          <span class="choice"><span class="circle"></span> أمزّق الورقة وأقول إنني لا أجيد الرسم أبدًا</span>
+          <span class="choice"><span class="circle"></span> أفكر كيف يمكنني تحويل الخطأ لجزء جميل من الرسمة</span>
+        </div>
+      </div>
+    </div>
+    <div class="page-num" style="right:14mm;background:var(--sun);color:var(--ink);">6</div>
+  </div>
+
+  <!-- ============ PAGE 7 — COLORING ============ -->
+  <div class="page color-page">
+    <div class="inner">
+      <span class="kicker" style="background:var(--teal);">🎨 لوّن بإبداع</span>
+      <div class="headline" style="color:var(--teal);">نزهة نور الداخلية بانتظار ألوانك</div>
+      <div class="rule"></div>
+
+      <div class="color-frame">
+        <svg viewBox="0 0 400 320" width="170mm">
+          <line x1="10" y1="290" x2="390" y2="290" stroke="#2B2118" stroke-width="3"/>
+          <!-- window with rain -->
+          <rect x="40" y="40" width="90" height="70" rx="6" fill="none" stroke="#2B2118" stroke-width="3"/>
+          <line x1="85" y1="40" x2="85" y2="110" stroke="#2B2118" stroke-width="2"/>
+          <line x1="40" y1="75" x2="130" y2="75" stroke="#2B2118" stroke-width="2"/>
+          <g stroke="#2B2118" stroke-width="2">
+            <line x1="55" y1="115" x2="50" y2="128"/>
+            <line x1="70" y1="115" x2="65" y2="128"/>
+            <line x1="85" y1="115" x2="80" y2="128"/>
+          </g>
+          <!-- blanket "tent" shape -->
+          <path d="M150 260 L250 260 L280 130 L120 130 Z" fill="none" stroke="#2B2118" stroke-width="3"/>
+          <!-- rainbow visible through window/above tent -->
+          <path d="M290 90 A60 60 0 0 1 380 90" fill="none" stroke="#2B2118" stroke-width="3"/>
+          <path d="M300 90 A48 48 0 0 1 370 90" fill="none" stroke="#2B2118" stroke-width="2"/>
+          <!-- kid characters sitting under blanket tent -->
+          <g stroke="#2B2118" stroke-width="3" fill="none">
+            <circle cx="180" cy="230" r="24"/>
+            <circle cx="173" cy="224" r="2.4" fill="#2B2118"/><circle cx="187" cy="224" r="2.4" fill="#2B2118"/>
+            <path d="M172 238 Q180 243 188 238"/>
+          </g>
+          <g stroke="#2B2118" stroke-width="3" fill="none">
+            <circle cx="222" cy="235" r="19"/>
+            <circle cx="216" cy="230" r="2" fill="#2B2118"/><circle cx="228" cy="230" r="2" fill="#2B2118"/>
+            <path d="M215 240 Q222 244 229 240"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="page-num" style="right:14mm;background:var(--teal);">7</div>
+  </div>
+
+  <!-- ============ PAGE 8 — DID YOU KNOW + GOODBYE ============ -->
+  <div class="page">
+    <div class="inner" style="background:linear-gradient(180deg,#E8F6EE,#FFF8EC 55%);">
+      <span class="kicker" style="background:#4CAF6D;">🌟 هل تعلم؟</span>
+      <div class="headline" style="color:#2C7A4B;">التفاؤل من حولنا</div>
+      <div class="rule" style="background:repeating-linear-gradient(90deg,#4CAF6D 0 10px, var(--sun) 10px 20px);"></div>
+
+      <div class="fact-card">
+        <div style="font-size:40px;">🧠</div>
+        <p>الدراسات تقول إن الأطفال المتفائلين غالبًا ما يتعاملون مع المشاكل بطرق إبداعية أكثر، لأنهم يبحثون عن حلول بدلًا من الاستسلام.</p>
+      </div>
+      <div class="fact-card" style="border-color:var(--teal);">
+        <div style="font-size:40px;">🌈</div>
+        <p>قوس قزح يظهر فقط بعد المطر، حين تجتمع أشعة الشمس مع قطرات الماء معًا — تذكير جميل بأن الأشياء الجميلة قد تأتي بعد الصعوبات.</p>
+      </div>
+      <div class="fact-card" style="border-color:var(--coral);">
+        <div style="font-size:40px;">😊</div>
+        <p>مجرد الابتسام، حتى لو بشكل متعمّد في موقف صعب، يساعد الدماغ على الشعور بتحسّن طفيف في المزاج بعد قليل.</p>
+      </div>
+
+      <div class="signoff">
+        <h3>✍️ اكتب قصتك الخاصة</h3>
+        <p style="margin:0 0 4mm;">في المرة القادمة التي تتغيّر فيها خطة كنت متحمسًا لها وتجد بديلًا جميلًا، عد إلى هنا واكتب ماذا حدث:</p>
+        <div class="sig-line" style="width:80mm;"></div>
+      </div>
+
+      <div class="next-issue">
+        <span>📅 نراكم في العدد القادم بقيمة جديدة قريبًا</span>
+        <span>قناة صاحب القول: <span class="sig-line" style="width:28mm;border-color:#fff;"></span></span>
+      </div>
+    </div>
+    <div class="page-num" style="right:14mm;background:#4CAF6D;">8</div>
+  </div>
+
+</div>
+</body>
+</html>

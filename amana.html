@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>براعم النور - العدد السادس عشر</title>
+<meta property="og:title" content="براعم النور - العدد السادس عشر - قيمة الأمانة">
+<meta property="og:description" content="مجلة الأطفال المشرقة - قصة، ألعاب، وأنشطة عن قيمة الأمانة">
+<meta property="og:image" content="https://saheb-el-kawl-media.github.io/baraem-alnour/og_amana.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://saheb-el-kawl-media.github.io/baraem-alnour/amana.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="براعم النور - العدد السادس عشر - قيمة الأمانة">
+<meta name="twitter:description" content="مجلة الأطفال المشرقة - قصة، ألعاب، وأنشطة عن قيمة الأمانة">
+<meta name="twitter:image" content="https://saheb-el-kawl-media.github.io/baraem-alnour/og_amana.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marhey:wght@500;600;700&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sun:#FFC93C;
+    --coral:#FF6B5B;
+    --teal:#0F8B8D;
+    --grape:#6C4AB6;
+    --cream:#FFF8EC;
+    --ink:#2B2118;
+    --leaf:#4CAF6D;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:#DCEFE9;font-family:'Tajawal',sans-serif;color:var(--ink);}
+
+  .toolbar{
+    position:sticky;top:0;z-index:50;
+    background:var(--ink);color:var(--cream);
+    display:flex;align-items:center;justify-content:center;gap:14px;
+    padding:10px 16px;font-family:'Tajawal',sans-serif;font-weight:700;font-size:14px;
+  }
+  .toolbar button{
+    background:var(--sun);color:var(--ink);border:none;border-radius:999px;
+    padding:8px 18px;font-weight:900;font-size:14px;cursor:pointer;font-family:'Tajawal',sans-serif;
+  }
+  .toolbar span{opacity:.8;font-weight:400;}
+
+  .stage{
+    display:flex;flex-direction:column;align-items:center;gap:28px;
+    padding:28px 12px 60px;
+  }
+
+  .page{
+    position:relative;
+    width:210mm;height:297mm;
+    background:var(--cream);
+    box-shadow:0 8px 30px rgba(0,0,0,.18);
+    overflow:hidden;
+    flex-shrink:0;
+  }
+
+  .page-num{
+    position:absolute;bottom:10mm;
+    width:14mm;height:14mm;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Marhey',sans-serif;font-weight:700;font-size:16px;color:#fff;
+  }
+
+  h1,h2,h3,.disp{font-family:'Marhey',sans-serif;}
+
+  /* ---------- COVER ---------- */
+  .cover{
+    background:linear-gradient(180deg,#FFDE7A 0%, var(--sun) 38%, #FFB13C 100%);
+    display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
+    text-align:center;
+  }
+  .cover .sunburst{
+    position:absolute;top:-90mm;left:50%;transform:translateX(-50%);
+    width:260mm;height:260mm;border-radius:50%;
+    background:repeating-conic-gradient(#FFE8A3 0deg 9deg, transparent 9deg 18deg);
+    opacity:.55;
+  }
+  .cover .masthead{
+    margin-top:20mm;font-size:64px;font-weight:700;color:var(--ink);
+    letter-spacing:1px; z-index:2; text-shadow:3px 3px 0 #fff;
+  }
+  .cover .tagline{
+    z-index:2;font-family:'Tajawal',sans-serif;font-weight:700;font-size:17px;
+    background:var(--coral);color:#fff;padding:6px 22px;border-radius:999px;margin-top:4mm;
+  }
+  .cover .issue-badge{
+    z-index:2;margin-top:10mm;background:var(--teal);color:#fff;font-family:'Marhey';
+    font-weight:700;font-size:20px;padding:10px 26px;border-radius:16px;
+    transform:rotate(-3deg);box-shadow:0 6px 0 #0a5d5e;
+  }
+  .cover .scene{
+    z-index:2;margin-top:14mm;width:150mm;
+  }
+  .cover .cover-caption{
+    z-index:2;margin-top:8mm;font-weight:700;color:var(--ink);font-size:15px;
+    background:#fff;padding:8px 20px;border-radius:14px;border:3px dashed var(--grape);
+  }
+  .cover .strip{
+    position:absolute;bottom:0;left:0;right:0;height:22mm;background:var(--grape);
+    display:flex;align-items:center;justify-content:space-around;color:#fff;
+    font-weight:700;font-size:13px;font-family:'Tajawal',sans-serif;
+  }
+  .cover .strip div{display:flex;align-items:center;gap:6px;}
+
+  /* ---------- generic inner page chrome ---------- */
+  .inner{padding:16mm 18mm 20mm;height:100%;position:relative;}
+  .kicker{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--coral);color:#fff;font-weight:800;font-size:13px;
+    padding:5px 16px;border-radius:999px;font-family:'Marhey';
+  }
+  .headline{font-size:34px;font-weight:700;color:var(--teal);margin:8px 0 2mm;}
+  .rule{height:5px;border-radius:4px;background:repeating-linear-gradient(90deg,var(--sun) 0 10px, var(--coral) 10px 20px);width:60mm;margin-bottom:8mm;}
+
+  /* ---------- welcome / TOC page ---------- */
+  .welcome-box{
+    background:#fff;border-radius:20px;padding:8mm 10mm;border:3px solid var(--sun);
+    font-size:14.5px;line-height:2.1;margin-bottom:8mm;position:relative;
+  }
+  .welcome-box:before{
+    content:"";position:absolute;top:-6mm;right:10mm;width:12mm;height:12mm;
+    background:var(--coral);border-radius:50%;
+  }
+  .toc-grid{display:grid;grid-template-columns:1fr 1fr;gap:6mm;}
+  .toc-item{
+    background:#fff;border-radius:16px;padding:6mm;display:flex;gap:4mm;align-items:flex-start;
+    box-shadow:0 4px 0 rgba(0,0,0,.08);
+  }
+  .toc-num{
+    min-width:11mm;height:11mm;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-family:'Marhey';font-weight:700;color:#fff;font-size:15px;flex-shrink:0;
+  }
+  .toc-item h4{margin:0 0 2px;font-size:15.5px;font-family:'Marhey';}
+  .toc-item p{margin:0;font-size:12px;color:#5a4f42;line-height:1.6;}
+
+  /* ---------- story pages ---------- */
+  .story-page{background:#FFF3E0;}
+  .story-text{font-size:15.5px;line-height:2.15;column-gap:8mm;}
+  .story-text p{margin:0 0 4mm;}
+  .story-text .cap{
+    font-family:'Marhey';color:var(--coral);font-weight:700;
+  }
+  .speech{
+    background:#fff;border:3px solid var(--teal);border-radius:18px;padding:5mm 7mm;
+    font-size:14px;font-weight:700;position:relative;margin:5mm 0;color:var(--teal);
+  }
+  .speech:after{
+    content:"";position:absolute;bottom:-8mm;right:14mm;border:8mm solid transparent;
+    border-top-color:#fff;
+  }
+  .scene-panel{width:100%;border-radius:18px;overflow:hidden;margin:6mm 0;border:4px solid #fff;box-shadow:0 4px 14px rgba(0,0,0,.12);}
+
+  /* ---------- values reflection page ---------- */
+  .value-card{
+    background:#fff;border-radius:20px;padding:7mm 9mm;margin-bottom:6mm;
+    border-right:8px solid var(--grape);
+  }
+  .value-card h3{margin:0 0 3mm;font-size:18px;color:var(--grape);}
+  .value-card p{margin:0;font-size:14px;line-height:1.9;}
+  .qbox{
+    background:var(--teal);color:#fff;border-radius:16px;padding:6mm 8mm;font-size:14px;line-height:2;font-weight:700;
+  }
+  .qbox .qnum{
+    display:inline-flex;width:8mm;height:8mm;border-radius:50%;background:var(--sun);color:var(--ink);
+    align-items:center;justify-content:center;font-family:'Marhey';margin-left:6px;font-size:13px;
+  }
+  .line-write{border-bottom:2px dotted #ffffffaa;display:inline-block;min-width:70%;margin-right:4px;}
+
+  /* ---------- activity page ---------- */
+  .activity-section{background:#fff;border-radius:18px;padding:6mm 8mm;margin-bottom:6mm;}
+  .activity-section h3{color:var(--coral);margin:0 0 4mm;font-size:17px;}
+  .match-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:5mm;font-size:14px;}
+  .match-pill{
+    background:var(--sun);border-radius:999px;padding:5px 14px;font-weight:700;min-width:32mm;text-align:center;
+  }
+  .match-pill.b{background:#E7F5EC;}
+  .dots{flex:1;border-bottom:2px dotted #b9ac96;margin:0 4mm;}
+  .scenario{
+    background:#FDF1E7;border-radius:14px;padding:5mm 6mm;margin-bottom:4mm;font-size:13.5px;line-height:1.9;
+  }
+  .scenario b{color:var(--teal);}
+  .choice{display:inline-flex;align-items:center;gap:5px;margin-left:10mm;font-weight:700;}
+  .circle{width:5mm;height:5mm;border:2.5px solid var(--ink);border-radius:50%;display:inline-block;}
+
+  /* ---------- coloring page ---------- */
+  .color-page{background:#fff;}
+  .color-frame{
+    border:5px dashed var(--coral);border-radius:22px;height:210mm;display:flex;align-items:center;justify-content:center;
+  }
+
+  /* ---------- back page ---------- */
+  .fact-card{
+    background:#fff;border-radius:20px;padding:7mm 9mm;margin-bottom:6mm;border:3px solid var(--sun);
+    display:flex;gap:6mm;align-items:center;
+  }
+  .fact-card p{margin:0;font-size:13.5px;line-height:1.9;}
+  .signoff{
+    background:var(--grape);color:#fff;border-radius:20px;padding:8mm;text-align:center;
+  }
+  .signoff h3{margin:0 0 4mm;font-size:22px;}
+  .signoff .sig-line{border-bottom:2px solid #fff;display:inline-block;width:60mm;margin:0 3mm;}
+  .next-issue{
+    margin-top:6mm;background:var(--teal);color:#fff;border-radius:16px;padding:5mm 7mm;font-size:13px;
+    display:flex;justify-content:space-between;align-items:center;font-weight:700;
+  }
+
+  @media print{
+    body{background:#fff;}
+    .toolbar{display:none;}
+    .stage{padding:0;gap:0;}
+    .page{box-shadow:none;margin:0;}
+    @page{size:A4;margin:0;}
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <span>مجلة براعم النور — جاهزة للقراءة والطباعة</span>
+  <button onclick="window.print()">🖨️ اطبع المجلة (A4)</button>
+</div>
+
+<div class="stage">
+
+  <!-- ============ PAGE 1 — COVER ============ -->
+  <div class="page cover">
+    <div class="sunburst"></div>
+    <div class="masthead">براعم النور</div>
+    <div class="tagline">مجلة الأطفال المشرقة ✨</div>
+    <div class="issue-badge">العدد السادس عشر · قيمة الأمانة</div>
+
+    <img class="scene" src="amana_cover.jpg" alt="ياسمين تتسلّم مفتاح بيت الجيران" style="z-index:2;width:150mm;border-radius:24px;box-shadow:0 10px 30px rgba(0,0,0,.25);border:5px solid #fff;">
+
+        <div class="cover-caption">"من وثق بك، لا تخذله 🔑" — قصة هذا العدد</div>
+
+    <svg class="brand-seal" viewBox="0 0 200 200" style="width:24mm;z-index:2;margin-top:14mm;filter:drop-shadow(0 3px 5px rgba(0,0,0,.22));">
+      <circle cx="100" cy="100" r="96" fill="#1A1A1A"/>
+      <circle cx="100" cy="100" r="88" fill="none" stroke="#D4AF37" stroke-width="3"/>
+      <circle cx="100" cy="100" r="78" fill="none" stroke="#D4AF37" stroke-width="3"/>
+      <g fill="#D4AF37">
+        <circle cx="100" cy="14" r="4"/>
+        <circle cx="141" cy="24" r="4"/>
+        <circle cx="172" cy="55" r="4"/>
+        <circle cx="184" cy="100" r="4"/>
+        <circle cx="172" cy="145" r="4"/>
+        <circle cx="141" cy="176" r="4"/>
+        <circle cx="100" cy="186" r="4"/>
+        <circle cx="59" cy="176" r="4"/>
+        <circle cx="28" cy="145" r="4"/>
+        <circle cx="16" cy="100" r="4"/>
+        <circle cx="28" cy="55" r="4"/>
+        <circle cx="59" cy="24" r="4"/>
+      </g>
+      <text x="100" y="93" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="26" letter-spacing="2" fill="#D4AF37">SAHEB</text>
+      <text x="100" y="123" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="26" letter-spacing="2" fill="#D4AF37">EL KAWL</text>
+    </svg>
+
+    <div class="strip">
+      <div>📖 قصة قصيرة</div>
+      <div>💡 ركن القيم</div>
+      <div>🧩 العب وفكّر</div>
+      <div>🎨 لوّن بإبداع</div>
+    </div>
+  </div>
+
+  <!-- ============ PAGE 2 — WELCOME + TOC ============ -->
+  <div class="page">
+    <div class="inner" style="background:linear-gradient(180deg,#FFF8EC,#FFF8EC 70%,#FDEFD8);">
+      <span class="kicker">🌤️ أهلًا بك يا برعم</span>
+      <div class="headline">مرحبًا في عالم براعم النور</div>
+      <div class="rule"></div>
+
+      <div class="welcome-box">
+        أهلًا بك من جديد يا صديقي القارئ 👋<br>
+        في كل عدد من "براعم النور"، نأخذك في رحلة قصيرة حول قيمة جميلة نتعلمها معًا،
+        ونحوّلها إلى قصة، وأسئلة للتفكير، وألعاب ممتعة. عدد هذه المجلة عن قيمة
+        <b style="color:var(--coral)">الأمانة</b> — لأن ثقة الآخرين فينا هدية غالية يجب أن نحافظ عليها. 🔑<br>
+        خُذ قلمك الملوّن، وابدأ رحلتك من الصفحة التالية!
+      </div>
+
+      <div class="toc-grid">
+        <div class="toc-item">
+          <div class="toc-num" style="background:var(--coral);">1</div>
+          <div><h4>📖 مفتاح بيت الجيران</h4><p>قصة قصيرة عن ياسمين اللي عهدوا إليها بمفتاح بيت الجيران أثناء سفرهم.</p></div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-num" style="background:var(--grape);">2</div>
+          <div><h4>💡 ركن القيم</h4><p>ماذا نتعلّم من القصة؟ وما الفرق بين الأمانة والمسؤولية؟</p></div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-num" style="background:var(--teal);">3</div>
+          <div><h4>🧩 العب وفكّر</h4><p>وصّل الكلمات بمعانيها، واختر القرار الصحيح في كل موقف.</p></div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-num" style="background:var(--sun);color:var(--ink);">4</div>
+          <div><h4>🎨 لوّن بإبداع</h4><p>لوحة كبيرة من قصة العدد بانتظار ألوانك الجميلة.</p></div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-num" style="background:#4CAF6D;">5</div>
+          <div><h4>🌟 هل تعلم؟</h4><p>معلومة ممتعة عن الأمانة والثقة بين البشر والحيوانات.</p></div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-num" style="background:#FF9F5A;">6</div>
+          <div><h4>✍️ إلى اللقاء</h4><p>مساحة لك لتكتب قصتك الخاصة، ونلتقي في العدد القادم.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ PAGE 3 — STORY PART 1 ============ -->
+  <div class="page story-page">
+    <div class="inner">
+      <span class="kicker" style="background:var(--teal);">📖 قصة العدد</span>
+      <div class="headline">مفتاح بيت الجيران</div>
+      <div class="rule" style="background:repeating-linear-gradient(90deg,var(--teal) 0 10px, var(--sun) 10px 20px);"></div>
+
+      <img class="scene-panel" src="amana_story.jpg" alt="ياسمين تطعم قطة الجيران" style="width:100%;aspect-ratio:2.2/1;object-fit:cover;object-position:center 35%;display:block;">
+
+      <div class="story-text">
+        <p><span class="cap">قبل</span> أن يسافر جيران <b>ياسمين</b> في رحلة أسبوعين، طرقت أم سلمى باب بيتهم وقالت لوالدة ياسمين: "هل يمكن أن تعتني ياسمين بقطتنا وتسقي نباتاتنا؟ نثق بها كثيرًا." وأعطتها مفتاح البيت بعناية.</p>
+        <p>شعرت ياسمين بفخر كبير وهي تمسك المفتاح الذهبي اللامع بين يديها. وضعته في مكان آمن في غرفتها، وكتبت جدولًا صغيرًا لمواعيد إطعام القطة وسقاية النباتات.</p>
+        <p>في الأسبوع الأول، كانت ياسمين ملتزمة تمامًا. لكن في اليوم العاشر، دُعيت لحفلة عيد ميلاد صديقتها في نفس وقت إطعام القطة المعتاد.</p>
+        <div class="speech" style="border-color:var(--coral);color:var(--coral);">ياسمين (تفكر بينها وبين نفسها): "يوم واحد متأخر لن يضر... القطة يمكنها الانتظار قليلًا."</div>
+        <p>ترددت للحظة، لكنها تذكّرت نظرة الثقة في عيني أم سلمى وهي تسلّمها المفتاح.</p>
+      </div>
+    </div>
+    <div class="page-num" style="right:14mm;background:var(--teal);">3</div>
+  </div>
+
+  <!-- ============ PAGE 4 — STORY PART 2 ============ -->
+  <div class="page story-page">
+    <div class="inner">
+      <span class="kicker" style="background:var(--coral);">📖 تابع القصة</span>
+      <div class="headline" style="color:var(--coral);">من وثق بك، لا تخذله</div>
+      <div class="rule"></div>
+
+      <div class="story-text">
+        <p>قررت ياسمين أن تمرّ على بيت الجيران أولًا قبل الذهاب للحفلة، حتى لو تأخرت قليلًا. أطعمت القطة، وسقت النباتات، وتأكدت أن كل شيء بخير، ثم أغلقت الباب بعناية وذهبت للاحتفال بضمير مرتاح.</p>
+        <div class="speech">صديقتها في الحفلة: "لماذا تأخرتِ؟ كان بإمكانك تأجيل مهمتك ليوم غد!"</div>
+        <p>ابتسمت ياسمين وقالت: "المفتاح الذي بين يدي ليس مجرد قطعة معدن، إنه ثقة وضعوها في يدي. لا أريد أن أخيّب ظنّهم حتى لو لم يعرفوا أبدًا."</p>
+        <p>عندما عاد الجيران من سفرهم، وجدوا قطتهم بصحة جيدة، ونباتاتهم مزدهرة أكثر من أي وقت مضى. شكرت أم سلمى ياسمين بحرارة، وقالت لوالدتها: "ابنتك كنز حقيقي، أمانتها تفوق عمرها."</p>
+        <p>شعرت ياسمين بسعادة أعمق من أي هدية، لأنها عرفت أن الثقة التي مُنحت لها كانت في المكان الصحيح.</p>
+      </div>
+
+      <div style="text-align:center;margin-top:6mm;">
+        <div style="display:inline-block;background:var(--sun);padding:8mm 14mm;border-radius:20px;transform:rotate(-2deg);box-shadow:0 6px 0 #c98f10;">
+          <span style="font-family:'Marhey';font-size:22px;font-weight:700;color:var(--ink);">"من وثق بك، لا تخذله"</span>
+        </div>
+      </div>
+    </div>
+    <div class="page-num" style="right:14mm;background:var(--coral);">4</div>
+  </div>
+
+  <!-- ============ PAGE 5 — VALUES CORNER ============ -->
+  <div class="page">
+    <div class="inner" style="background:#F4EEFB;">
+      <span class="kicker" style="background:var(--grape);">💡 ركن القيم</span>
+      <div class="headline" style="color:var(--grape);">ماذا نتعلّم من القصة؟</div>
+      <div class="rule" style="background:repeating-linear-gradient(90deg,var(--grape) 0 10px, var(--sun) 10px 20px);"></div>
+
+      <div class="value-card">
+        <h3>🔑 الأمانة</h3>
+        <p>أن نحافظ على ما يُعهد إلينا من أشياء أو أسرار أو مهام، ونؤدّيها كما لو كان صاحبها يراقبنا، حتى لو لم يكن أحد يعلم بتقصيرنا لو حدث.</p>
+      </div>
+      <div class="value-card" style="border-color:var(--teal);">
+        <h3 style="color:var(--teal);">💛 لماذا يهم؟</h3>
+        <p>ثقة أم سلمى في ياسمين لم تكن مجرد كلمة، بل كانت مسؤولية حقيقية. الأمانة تعني أن نحترم تلك الثقة حتى عندما تتعارض مع رغباتنا الشخصية.</p>
+      </div>
+
+      <div class="qbox">
+        هيا نفكّر معًا:<br><br>
+        <span class="qnum">1</span> هل عهد إليك أحد بشيء مهم من قبل؟ كيف تصرّفت؟ <span class="line-write"></span><br><br>
+        <span class="qnum">2</span> ما الفرق بين أن نفعل الصواب أمام الناس، وأن نفعله في الخفاء؟ <span class="line-write"></span><br><br>
+        <span class="qnum">3</span> اذكر أمانة صغيرة تحملها كل يوم (سرّ صديق، مهمة، غرض). <span class="line-write"></span>
+      </div>
+    </div>
+    <div class="page-num" style="right:14mm;background:var(--grape);">5</div>
+  </div>
+
+  <!-- ============ PAGE 6 — ACTIVITY ============ -->
+  <div class="page">
+    <div class="inner" style="background:#FFF6E9;">
+      <span class="kicker" style="background:var(--sun);color:var(--ink);">🧩 العب وفكّر</span>
+      <div class="headline" style="color:#D98A00;">وقت التحدي!</div>
+      <div class="rule" style="background:repeating-linear-gradient(90deg,var(--sun) 0 10px, var(--coral) 10px 20px);"></div>
+
+      <div class="activity-section">
+        <h3>1) وصّل كل كلمة بمعناها الصحيح</h3>
+        <div class="match-row"><div class="match-pill">أمانة</div><div class="dots"></div><div class="match-pill b">المحافظة على ما يُعهد إلينا به</div></div>
+        <div class="match-row"><div class="match-pill">خيانة</div><div class="dots"></div><div class="match-pill b">التفريط بثقة وضعها أحدهم فينا</div></div>
+        <div class="match-row"><div class="match-pill">عهد</div><div class="dots"></div><div class="match-pill b">وعد أو التزام تجاه شخص آخر</div></div>
+        <div class="match-row"><div class="match-pill">سرّ</div><div class="dots"></div><div class="match-pill b">معلومة خاصة يُطلب منّا كتمانها</div></div>
+      </div>
+
+      <div class="activity-section">
+        <h3>2) ماذا تفعل؟ اختر الدائرة الصحيحة</h3>
+        <div class="scenario">
+          <b>الموقف الأول:</b> صديقك أخبرك سرًّا صغيرًا وطلب منك ألا تخبر أحدًا.
+          <br>
+          <span class="choice"><span class="circle"></span> أخبر صديقًا آخر لأنه سرّ مثير</span>
+          <span class="choice"><span class="circle"></span> أحافظ على السرّ لأنه وثق بي</span>
+        </div>
+        <div class="scenario">
+          <b>الموقف الثاني:</b> طلب منك معلمك توزيع دفاتر الاختبار على الزملاء بأمانة.
+          <br>
+          <span class="choice"><span class="circle"></span> أنظر لعلامة دفتري أولًا لأنه لن يعرف أحد</span>
+          <span class="choice"><span class="circle"></span> أوزّع الدفاتر مباشرة كما طلب مني تمامًا</span>
+        </div>
+      </div>
+    </div>
+    <div class="page-num" style="right:14mm;background:var(--sun);color:var(--ink);">6</div>
+  </div>
+
+  <!-- ============ PAGE 7 — COLORING ============ -->
+  <div class="page color-page">
+    <div class="inner">
+      <span class="kicker" style="background:var(--teal);">🎨 لوّن بإبداع</span>
+      <div class="headline" style="color:var(--teal);">ياسمين تعتني بالقطة بانتظار ألوانك</div>
+      <div class="rule"></div>
+
+      <div class="color-frame">
+        <svg viewBox="0 0 400 320" width="170mm">
+          <line x1="10" y1="290" x2="390" y2="290" stroke="#2B2118" stroke-width="3"/>
+          <circle cx="340" cy="45" r="26" fill="none" stroke="#2B2118" stroke-width="3"/>
+          <g stroke="#2B2118" stroke-width="3">
+            <line x1="340" y1="5" x2="340" y2="-4"/>
+            <line x1="374" y1="45" x2="384" y2="45"/>
+            <line x1="365" y1="20" x2="372" y2="13"/>
+            <line x1="365" y1="70" x2="372" y2="77"/>
+          </g>
+          <!-- kid character kneeling, feeding a cat -->
+          <g stroke="#2B2118" stroke-width="3" fill="none">
+            <circle cx="180" cy="210" r="26"/>
+            <circle cx="172" cy="204" r="2.6" fill="#2B2118"/><circle cx="188" cy="204" r="2.6" fill="#2B2118"/>
+            <path d="M171 218 Q180 223 189 218"/>
+            <line x1="180" y1="236" x2="170" y2="265"/>
+            <line x1="180" y1="236" x2="205" y2="255"/>
+          </g>
+          <!-- cat -->
+          <ellipse cx="240" cy="270" rx="30" ry="16" fill="none" stroke="#2B2118" stroke-width="3"/>
+          <circle cx="270" cy="255" r="14" fill="none" stroke="#2B2118" stroke-width="3"/>
+          <path d="M260 245 L255 235 M280 245 L285 235" stroke="#2B2118" stroke-width="2.5"/>
+          <!-- bowl -->
+          <ellipse cx="215" cy="278" rx="14" ry="6" fill="none" stroke="#2B2118" stroke-width="2.5"/>
+        </svg>
+      </div>
+    </div>
+    <div class="page-num" style="right:14mm;background:var(--teal);">7</div>
+  </div>
+
+  <!-- ============ PAGE 8 — DID YOU KNOW + GOODBYE ============ -->
+  <div class="page">
+    <div class="inner" style="background:linear-gradient(180deg,#E8F6EE,#FFF8EC 55%);">
+      <span class="kicker" style="background:#4CAF6D;">🌟 هل تعلم؟</span>
+      <div class="headline" style="color:#2C7A4B;">الأمانة من حولنا</div>
+      <div class="rule" style="background:repeating-linear-gradient(90deg,#4CAF6D 0 10px, var(--sun) 10px 20px);"></div>
+
+      <div class="fact-card">
+        <div style="font-size:40px;">🐕</div>
+        <p>الكلاب تُدرَّب أحيانًا لحراسة أشياء ثمينة لساعات طويلة من غير أن تتحرك، وتُعرف بأمانتها الشديدة تجاه أصحابها.</p>
+      </div>
+      <div class="fact-card" style="border-color:var(--teal);">
+        <div style="font-size:40px;">🤝</div>
+        <p>الثقة تُبنى ببطء عبر مواقف صغيرة متكررة، لكنها قد تنكسر بموقف واحد فقط من خيانة الأمانة.</p>
+      </div>
+      <div class="fact-card" style="border-color:var(--coral);">
+        <div style="font-size:40px;">🏦</div>
+        <p>كلمة "أمانة" في اللغة العربية من نفس جذر كلمة "إيمان"، لأن كليهما يرتبطان بالثقة والصدق الداخلي العميق.</p>
+      </div>
+
+      <div class="signoff">
+        <h3>✍️ اكتب قصتك الخاصة</h3>
+        <p style="margin:0 0 4mm;">في المرة القادمة التي يعهد إليك فيها أحد بأمانة، عد إلى هنا واكتب ماذا حدث:</p>
+        <div class="sig-line" style="width:80mm;"></div>
+      </div>
+
+      <div class="next-issue">
+        <span>📅 نراكم في العدد القادم بقيمة جديدة قريبًا</span>
+        <span>قناة صاحب القول: <span class="sig-line" style="width:28mm;border-color:#fff;"></span></span>
+      </div>
+    </div>
+    <div class="page-num" style="right:14mm;background:#4CAF6D;">8</div>
+  </div>
+
+</div>
+</body>
+</html>

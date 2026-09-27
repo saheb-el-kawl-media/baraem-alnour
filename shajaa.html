@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>براعم النور - العدد السابع عشر</title>
+<meta property="og:title" content="براعم النور - العدد السابع عشر - قيمة الشجاعة">
+<meta property="og:description" content="مجلة الأطفال المشرقة - قصة، ألعاب، وأنشطة عن قيمة الشجاعة">
+<meta property="og:image" content="https://saheb-el-kawl-media.github.io/baraem-alnour/og_shajaa.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://saheb-el-kawl-media.github.io/baraem-alnour/shajaa.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="براعم النور - العدد السابع عشر - قيمة الشجاعة">
+<meta name="twitter:description" content="مجلة الأطفال المشرقة - قصة، ألعاب، وأنشطة عن قيمة الشجاعة">
+<meta name="twitter:image" content="https://saheb-el-kawl-media.github.io/baraem-alnour/og_shajaa.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marhey:wght@500;600;700&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sun:#FFC93C;
+    --coral:#FF6B5B;
+    --teal:#0F8B8D;
+    --grape:#6C4AB6;
+    --cream:#FFF8EC;
+    --ink:#2B2118;
+    --leaf:#4CAF6D;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:#DCEFE9;font-family:'Tajawal',sans-serif;color:var(--ink);}
+
+  .toolbar{
+    position:sticky;top:0;z-index:50;
+    background:var(--ink);color:var(--cream);
+    display:flex;align-items:center;justify-content:center;gap:14px;
+    padding:10px 16px;font-family:'Tajawal',sans-serif;font-weight:700;font-size:14px;
+  }
+  .toolbar button{
+    background:var(--sun);color:var(--ink);border:none;border-radius:999px;
+    padding:8px 18px;font-weight:900;font-size:14px;cursor:pointer;font-family:'Tajawal',sans-serif;
+  }
+  .toolbar span{opacity:.8;font-weight:400;}
+
+  .stage{
+    display:flex;flex-direction:column;align-items:center;gap:28px;
+    padding:28px 12px 60px;
+  }
+
+  .page{
+    position:relative;
+    width:210mm;height:297mm;
+    background:var(--cream);
+    box-shadow:0 8px 30px rgba(0,0,0,.18);
+    overflow:hidden;
+    flex-shrink:0;
+  }
+
+  .page-num{
+    position:absolute;bottom:10mm;
+    width:14mm;height:14mm;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Marhey',sans-serif;font-weight:700;font-size:16px;color:#fff;
+  }
+
+  h1,h2,h3,.disp{font-family:'Marhey',sans-serif;}
+
+  /* ---------- COVER ---------- */
+  .cover{
+    background:linear-gradient(180deg,#FFDE7A 0%, var(--sun) 38%, #FFB13C 100%);
+    display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
+    text-align:center;
+  }
+  .cover .sunburst{
+    position:absolute;top:-90mm;left:50%;transform:translateX(-50%);
+    width:260mm;height:260mm;border-radius:50%;
+    background:repeating-conic-gradient(#FFE8A3 0deg 9deg, transparent 9deg 18deg);
+    opacity:.55;
+  }
+  .cover .masthead{
+    margin-top:20mm;font-size:64px;font-weight:700;color:var(--ink);
+    letter-spacing:1px; z-index:2; text-shadow:3px 3px 0 #fff;
+  }
+  .cover .tagline{
+    z-index:2;font-family:'Tajawal',sans-serif;font-weight:700;font-size:17px;
+    background:var(--coral);color:#fff;padding:6px 22px;border-radius:999px;margin-top:4mm;
+  }
+  .cover .issue-badge{
+    z-index:2;margin-top:10mm;background:var(--teal);color:#fff;font-family:'Marhey';
+    font-weight:700;font-size:20px;padding:10px 26px;border-radius:16px;
+    transform:rotate(-3deg);box-shadow:0 6px 0 #0a5d5e;
+  }
+  .cover .scene{
+    z-index:2;margin-top:14mm;width:150mm;
+  }
+  .cover .cover-caption{
+    z-index:2;margin-top:8mm;font-weight:700;color:var(--ink);font-size:15px;
+    background:#fff;padding:8px 20px;border-radius:14px;border:3px dashed var(--grape);
+  }
+  .cover .strip{
+    position:absolute;bottom:0;left:0;right:0;height:22mm;background:var(--grape);
+    display:flex;align-items:center;justify-content:space-around;color:#fff;
+    font-weight:700;font-size:13px;font-family:'Tajawal',sans-serif;
+  }
+  .cover .strip div{display:flex;align-items:center;gap:6px;}
+
+  /* ---------- generic inner page chrome ---------- */
+  .inner{padding:16mm 18mm 20mm;height:100%;position:relative;}
+  .kicker{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--coral);color:#fff;font-weight:800;font-size:13px;
+    padding:5px 16px;border-radius:999px;font-family:'Marhey';
+  }
+  .headline{font-size:34px;font-weight:700;color:var(--teal);margin:8px 0 2mm;}
+  .rule{height:5px;border-radius:4px;background:repeating-linear-gradient(90deg,var(--sun) 0 10px, var(--coral) 10px 20px);width:60mm;margin-bottom:8mm;}
+
+  /* ---------- welcome / TOC page ---------- */
+  .welcome-box{
+    background:#fff;border-radius:20px;padding:8mm 10mm;border:3px solid var(--sun);
+    font-size:14.5px;line-height:2.1;margin-bottom:8mm;position:relative;
+  }
+  .welcome-box:before{
+    content:"";position:absolute;top:-6mm;right:10mm;width:12mm;height:12mm;
+    background:var(--coral);border-radius:50%;
+  }
+  .toc-grid{display:grid;grid-template-columns:1fr 1fr;gap:6mm;}
+  .toc-item{
+    background:#fff;border-radius:16px;padding:6mm;display:flex;gap:4mm;align-items:flex-start;
+    box-shadow:0 4px 0 rgba(0,0,0,.08);
+  }
+  .toc-num{
+    min-width:11mm;height:11mm;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    font-family:'Marhey';font-weight:700;color:#fff;font-size:15px;flex-shrink:0;
+  }
+  .toc-item h4{margin:0 0 2px;font-size:15.5px;font-family:'Marhey';}
+  .toc-item p{margin:0;font-size:12px;color:#5a4f42;line-height:1.6;}
+
+  /* ---------- story pages ---------- */
+  .story-page{background:#FFF3E0;}
+  .story-text{font-size:15.5px;line-height:2.15;column-gap:8mm;}
+  .story-text p{margin:0 0 4mm;}
+  .story-text .cap{
+    font-family:'Marhey';color:var(--coral);font-weight:700;
+  }
+  .speech{
+    background:#fff;border:3px solid var(--teal);border-radius:18px;padding:5mm 7mm;
+    font-size:14px;font-weight:700;position:relative;margin:5mm 0;color:var(--teal);
+  }
+  .speech:after{
+    content:"";position:absolute;bottom:-8mm;right:14mm;border:8mm solid transparent;
+    border-top-color:#fff;
+  }
+  .scene-panel{width:100%;border-radius:18px;overflow:hidden;margin:6mm 0;border:4px solid #fff;box-shadow:0 4px 14px rgba(0,0,0,.12);}
+
+  /* ---------- reflective question box (replaces the old "stated moral" box) ---------- */
+  .reflect-box{
+    text-align:center;margin-top:6mm;
+  }
+  .reflect-box .bubble{
+    display:inline-block;background:#fff;border:3px solid var(--grape);padding:8mm 14mm;
+    border-radius:22px;max-width:150mm;box-shadow:0 6px 0 #d8cdf0;
+  }
+  .reflect-box .bubble .q-icon{
+    display:inline-flex;width:11mm;height:11mm;border-radius:50%;background:var(--grape);color:#fff;
+    align-items:center;justify-content:center;font-family:'Marhey';font-size:16px;margin-bottom:3mm;
+  }
+  .reflect-box .bubble p{
+    margin:0;font-family:'Marhey';font-size:18px;font-weight:600;color:var(--grape);line-height:1.7;
+  }
+
+  /* ---------- values reflection page ---------- */
+  .value-card{
+    background:#fff;border-radius:20px;padding:7mm 9mm;margin-bottom:6mm;
+    border-right:8px solid var(--grape);
+  }
+  .value-card h3{margin:0 0 3mm;font-size:18px;color:var(--grape);}
+  .value-card p{margin:0;font-size:14px;line-height:1.9;}
+  .qbox{
+    background:var(--teal);color:#fff;border-radius:16px;padding:6mm 8mm;font-size:14px;line-height:2;font-weight:700;
+  }
+  .qbox .qnum{
+    display:inline-flex;width:8mm;height:8mm;border-radius:50%;background:var(--sun);color:var(--ink);
+    align-items:center;justify-content:center;font-family:'Marhey';margin-left:6px;font-size:13px;
+  }
+  .line-write{border-bottom:2px dotted #ffffffaa;display:inline-block;min-width:70%;margin-right:4px;}
+
+  /* ---------- activity page ---------- */
+  .activity-section{background:#fff;border-radius:18px;padding:6mm 8mm;margin-bottom:6mm;}
+  .activity-section h3{color:var(--coral);margin:0 0 4mm;font-size:17px;}
+  .match-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:5mm;font-size:14px;}
+  .match-pill{
+    background:var(--sun);border-radius:999px;padding:5px 14px;font-weight:700;min-width:32mm;text-align:center;
+  }
+  .match-pill.b{background:#E7F5EC;}
+  .dots{flex:1;border-bottom:2px dotted #b9ac96;margin:0 4mm;}
+  .scenario{
+    background:#FDF1E7;border-radius:14px;padding:5mm 6mm;margin-bottom:4mm;font-size:13.5px;line-height:1.9;
+  }
+  .scenario b{color:var(--teal);}
+  .choice{display:inline-flex;align-items:center;gap:5px;margin-left:10mm;font-weight:700;}
+  .circle{width:5mm;height:5mm;border:2.5px solid var(--ink);border-radius:50%;display:inline-block;}
+
+  /* ---------- coloring page ---------- */
+  .color-page{background:#fff;}
+  .color-frame{
+    border:5px dashed var(--coral);border-radius:22px;height:210mm;display:flex;align-items:center;justify-content:center;
+  }
+
+  /* ---------- back page ---------- */
+  .fact-card{
+    background:#fff;border-radius:20px;padding:7mm 9mm;margin-bottom:6mm;border:3px solid var(--sun);
+    display:flex;gap:6mm;align-items:center;
+  }
+  .fact-card p{margin:0;font-size:13.5px;line-height:1.9;}
+  .signoff{
+    background:var(--grape);color:#fff;border-radius:20px;padding:8mm;text-align:center;
+  }
+  .signoff h3{margin:0 0 4mm;font-size:22px;}
+  .signoff .sig-line{border-bottom:2px solid #fff;display:inline-block;width:60mm;margin:0 3mm;}
+  .next-issue{
+    margin-top:6mm;background:var(--teal);color:#fff;border-radius:16px;padding:5mm 7mm;font-size:13px;
+    display:flex;justify-content:space-between;align-items:center;font-weight:700;
+  }
+
+  @media print{
+    body{background:#fff;}
+    .toolbar{display:none;}
+    .stage{padding:0;gap:0;}
+    .page{box-shadow:none;margin:0;}
+    @page{size:A4;margin:0;}
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <span>مجلة براعم النور — جاهزة للقراءة والطباعة</span>
+  <button onclick="window.print()">🖨️ اطبع المجلة (A4)</button>
+</div>
+
+<div class="stage">
+
+  <!-- ============ PAGE 1 — COVER ============ -->
+  <div class="page cover">
+    <div class="sunburst"></div>
+    <div class="masthead">براعم النور</div>
+    <div class="tagline">مجلة الأطفال المشرقة ✨</div>
+    <div class="issue-badge">العدد السابع عشر · قيمة الشجاعة</div>
+
+    <img class="scene" src="shajaa_cover.jpg" alt="خالد يضع يده على كتف سامي بثقة وفخر" style="z-index:2;width:150mm;border-radius:24px;box-shadow:0 10px 30px rgba(0,0,0,.25);border:5px solid #fff;object-fit:cover;aspect-ratio:1/1;">
+
+    <div class="cover-caption">"الشجاعة أن تفعل الصواب رغم خوفك 🦁" — قصة هذا العدد</div>
+
+    <svg class="brand-seal" viewBox="0 0 200 200" style="width:24mm;z-index:2;margin-top:14mm;filter:drop-shadow(0 3px 5px rgba(0,0,0,.22));">
+      <circle cx="100" cy="100" r="96" fill="#1A1A1A"/>
+      <circle cx="100" cy="100" r="88" fill="none" stroke="#D4AF37" stroke-width="3"/>
+      <circle cx="100" cy="100" r="78" fill="none" stroke="#D4AF37" stroke-width="3"/>
+      <g fill="#D4AF37">
+        <circle cx="100" cy="14" r="4"/>
+        <circle cx="141" cy="24" r="4"/>
+        <circle cx="172" cy="55" r="4"/>
+        <circle cx="184" cy="100" r="4"/>
+        <circle cx="172" cy="145" r="4"/>
+        <circle cx="141" cy="176" r="4"/>
+        <circle cx="100" cy="186" r="4"/>
+        <circle cx="59" cy="176" r="4"/>
+        <circle cx="28" cy="145" r="4"/>
+        <circle cx="16" cy="100" r="4"/>
+        <circle cx="28" cy="55" r="4"/>
+        <circle cx="59" cy="24" r="4"/>
+      </g>
+      <text x="100" y="93" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="26" letter-spacing="2" fill="#D4AF37">SAHEB</text>
+      <text x="100" y="123" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="26" letter-spacing="2" fill="#D4AF37">EL KAWL</text>
+    </svg>
+
+    <div class="strip">
+      <div>📖 قصة قصيرة</div>
+      <div>💡 ركن القيم</div>
+      <div>🧩 العب وفكّر</div>
+      <div>🎨 لوّن بإبداع</div>
+    </div>
+  </div>
+
+  <!-- ============ PAGE 2 — WELCOME + TOC ============ -->
+  <div class="page">
+    <div class="inner" style="background:linear-gradient(180deg,#FFF8EC,#FFF8EC 70%,#FDEFD8);">
+      <span class="kicker">🌤️ أهلًا بك يا برعم</span>
+      <div class="headline">مرحبًا في عالم براعم النور</div>
+      <div class="rule"></div>
+
+      <div class="welcome-box">
+        أهلًا بك من جديد يا صديقي القارئ 👋<br>
+        في كل عدد من "براعم النور"، نأخذك في رحلة قصيرة حول قيمة جميلة نتعلمها معًا،
+        ونحوّلها إلى قصة، وأسئلة للتفكير، وألعاب ممتعة. عدد هذه المجلة عن قيمة
+        <b style="color:var(--coral)">الشجاعة</b> — لأن الشجاعة الحقيقية ليست انعدام الخوف، بل التصرف الصحيح رغم وجوده. 🦁<br>
+        خُذ قلمك الملوّن، وابدأ رحلتك من الصفحة التالية!
+      </div>
+
+      <div class="toc-grid">
+        <div class="toc-item">
+          <div class="toc-num" style="background:var(--coral);">1</div>
+          <div><h4>📖 الوقوف بجانب سامي</h4><p>قصة قصيرة عن خالد الذي واجه خوفه ليدافع عن زميل جديد.</p></div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-num" style="background:var(--grape);">2</div>
+          <div><h4>💡 ركن القيم</h4><p>ماذا نتعلّم من القصة؟ وما الفرق بين الشجاعة والتهور؟</p></div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-num" style="background:var(--teal);">3</div>
+          <div><h4>🧩 العب وفكّر</h4><p>وصّل الكلمات بمعانيها، واختر القرار الصحيح في كل موقف.</p></div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-num" style="background:var(--sun);color:var(--ink);">4</div>
+          <div><h4>🎨 لوّن بإبداع</h4><p>لوحة كبيرة من قصة العدد بانتظار ألوانك الجميلة.</p></div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-num" style="background:#4CAF6D;">5</div>
+          <div><h4>🌟 هل تعلم؟</h4><p>معلومة ممتعة عن الشجاعة عند البشر والحيوانات.</p></div>
+        </div>
+        <div class="toc-item">
+          <div class="toc-num" style="background:#FF9F5A;">6</div>
+          <div><h4>✍️ إلى اللقاء</h4><p>مساحة لك لتكتب قصتك الخاصة، ونلتقي في العدد القادم.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ PAGE 3 — STORY PART 1 ============ -->
+  <div class="page story-page">
+    <div class="inner" style="display:flex;flex-direction:column;">
+      <div>
+        <span class="kicker" style="background:var(--teal);">📖 قصة العدد</span>
+        <div class="headline">الوقوف بجانب سامي</div>
+        <div class="rule" style="background:repeating-linear-gradient(90deg,var(--teal) 0 10px, var(--sun) 10px 20px);"></div>
+      </div>
+
+      <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:7mm;">
+        <img src="shajaa_story.jpg" alt="خالد يقف وحيدًا قرب الحائط يراقب زملاءه يلعبون بقلق" style="width:100%;aspect-ratio:1.78/1;object-fit:cover;object-position:center 38%;border-radius:18px;border:4px solid #fff;box-shadow:0 4px 14px rgba(0,0,0,.12);">
+        <div class="story-text">
+          <p><span class="cap">في</span> الأسبوع الأول من انضمام <b>سامي</b> إلى الصف، لاحظ <b>خالد</b> أن مجموعة من الزملاء، يقودهم وائل، بدأوا يسخرون من طريقة كلام سامي كلما تحدّث بارتباك أمام الصف.</p>
+          <p>كان خالد يشعر بالضيق كل مرة يسمع فيها الضحكات، لكنه كان يبقى صامتًا في مكانه، يخفض رأسه ويتظاهر بأنه لم ينتبه.</p>
+          <p>في يوم الاثنين، أثناء الاستراحة، أخذ وائل ومجموعته دفتر سامي ورموه بين أيديهم وهم يضحكون، بينما وقف سامي محرجًا يحاول استعادته دون جدوى.</p>
+        </div>
+        <div class="story-text">
+          <div class="speech" style="border-color:var(--coral);color:var(--coral);">خالد (يفكر بينه وبين نفسه): "لو تدخلت الآن، ربما يسخرون مني أنا أيضًا... الأسهل أن أصمت كالعادة."</div>
+          <p>شعر بقلبه يخفق بسرعة، ووقف للحظة عند حافة الساحة، بين رغبته في التصرف وخوفه مما قد يحدث.</p>
+        </div>
+      </div>
+    </div>
+    <div class="page-num" style="right:14mm;background:var(--teal);">3</div>
+  </div>
+
+  <!-- ============ PAGE 4 — STORY PART 2 ============ -->
+  <div class="page story-page">
+    <div class="inner">
+      <span class="kicker" style="background:var(--coral);">📖 تابع القصة</span>
+      <div class="headline" style="color:var(--coral);">خطوة واحدة كانت كافية</div>
+      <div class="rule"></div>
+
+      <div class="story-text">
+        <p>أخذ خالد نفسًا عميقًا، وسار بخطوات ثابتة نحو المجموعة. لم يصرخ ولم يتشاجر، بل وقف بهدوء بجانب سامي، ومدّ يده لأخذ الدفتر وقال بصوت واضح: "كفى، هذا ليس عدلًا. أعيدوا له دفتره."</p>
+        <div class="speech">وائل (متفاجئًا): "وما شأنك أنت؟ لماذا تدافع عنه؟"</div>
+        <p>ارتجفت يد خالد قليلًا، لكنه أكمل بثبات: "لأن ما تفعلونه ليس صحيحًا، وأنا لن أقف صامتًا بعد اليوم." ساد صمت قصير، ثم أعاد أحدهم الدفتر بصمت وابتعدت المجموعة شيئًا فشيئًا.</p>
+        <p>التفت سامي إلى خالد وهمس: "شكرًا لك، لم أظن أن أحدًا سيقف بجانبي." ابتسم خالد رغم أن يديه ما زالتا ترتجفان قليلًا من الموقف.</p>
+        <p>في طريقه إلى الصف، أدرك خالد أن الخوف لم يختفِ تمامًا في تلك اللحظة، لكنه اختار أن يتصرف رغم وجوده — وهذا ما جعله يشعر بفخر لم يشعر به من قبل.</p>
+      </div>
+
+      <div class="reflect-box">
+        <div class="bubble">
+          <span class="q-icon">؟</span>
+          <p>لو لم يتدخل خالد في تلك اللحظة، ماذا كان يمكن أن يحدث لسامي؟<br>ولو كنتَ مكان خالد، ما الذي كنت لتفعله أنت؟</p>
+        </div>
+      </div>
+    </div>
+    <div class="page-num" style="right:14mm;background:var(--coral);">4</div>
+  </div>
+
+  <!-- ============ PAGE 5 — VALUES CORNER ============ -->
+  <div class="page">
+    <div class="inner" style="background:#F4EEFB;">
+      <span class="kicker" style="background:var(--grape);">💡 ركن القيم</span>
+      <div class="headline" style="color:var(--grape);">ماذا نتعلّم من القصة؟</div>
+      <div class="rule" style="background:repeating-linear-gradient(90deg,var(--grape) 0 10px, var(--sun) 10px 20px);"></div>
+
+      <div class="value-card">
+        <h3>🦁 الشجاعة</h3>
+        <p>أن نتصرف بما نؤمن أنه صواب حتى عندما نشعر بالخوف أو القلق مما سيقوله الآخرون عنّا. الشجاعة ليست انعدام الخوف، بل القدرة على التصرف الصحيح رغم وجوده.</p>
+      </div>
+      <div class="value-card" style="border-color:var(--teal);">
+        <h3 style="color:var(--teal);">💛 لماذا يهم؟</h3>
+        <p>خالد شعر بالخوف تمامًا كما نشعر جميعًا في مواقف مشابهة، لكنه اختار أن يتصرف بما يوافق ضميره بدلًا من أن يصمت خشية رأي الآخرين. غالبًا ما تكون الشجاعة الحقيقية هادئة، ولا تحتاج إلى صراخ أو مواجهة عنيفة لتُحدث فرقًا.</p>
+      </div>
+
+      <div class="qbox">
+        هيا نفكّر معًا:<br><br>
+        <span class="qnum">1</span> هل واجهت موقفًا شعرت فيه بالخوف من الدفاع عن شيء تؤمن به؟ ماذا فعلت؟ <span class="line-write"></span><br><br>
+        <span class="qnum">2</span> ما الفرق بين الشجاعة (التصرف بحكمة رغم الخوف) والتهور (التصرف بدون تفكير في العواقب)؟ <span class="line-write"></span><br><br>
+        <span class="qnum">3</span> لو رأيت زميلًا يتعرّض للسخرية غدًا، ما أول خطوة صغيرة يمكنك أن تقوم بها؟ <span class="line-write"></span>
+      </div>
+    </div>
+    <div class="page-num" style="right:14mm;background:var(--grape);">5</div>
+  </div>
+
+  <!-- ============ PAGE 6 — ACTIVITY ============ -->
+  <div class="page">
+    <div class="inner" style="background:#FFF6E9;">
+      <span class="kicker" style="background:var(--sun);color:var(--ink);">🧩 العب وفكّر</span>
+      <div class="headline" style="color:#D98A00;">وقت التحدي!</div>
+      <div class="rule" style="background:repeating-linear-gradient(90deg,var(--sun) 0 10px, var(--coral) 10px 20px);"></div>
+
+      <div class="activity-section">
+        <h3>1) وصّل كل كلمة بمعناها الصحيح</h3>
+        <div class="match-row"><div class="match-pill">شجاعة</div><div class="dots"></div><div class="match-pill b">مواجهة الخوف من أجل فعل الصواب</div></div>
+        <div class="match-row"><div class="match-pill">تهوّر</div><div class="dots"></div><div class="match-pill b">التصرف بدون تفكير في العواقب</div></div>
+        <div class="match-row"><div class="match-pill">جبن</div><div class="dots"></div><div class="match-pill b">الهروب من فعل الصواب خوفًا من الآخرين</div></div>
+        <div class="match-row"><div class="match-pill">تعاطف</div><div class="dots"></div><div class="match-pill b">الشعور بما يشعر به الآخر ومحاولة مساعدته</div></div>
+      </div>
+
+      <div class="activity-section">
+        <h3>2) ماذا تفعل؟ اختر الدائرة الصحيحة</h3>
+        <div class="scenario">
+          <b>الموقف الأول:</b> رأيت صديقك يسخر من طالب جديد بسبب لهجته المختلفة.
+          <br>
+          <span class="choice"><span class="circle"></span> أضحك معهم حتى لا يسخروا مني أنا أيضًا</span>
+          <span class="choice"><span class="circle"></span> أطلب منهم التوقف بهدوء وأقف بجانب الطالب الجديد</span>
+        </div>
+        <div class="scenario">
+          <b>الموقف الثاني:</b> طلب منك المعلم الإجابة عن سؤال صعب أمام الصف وأنت غير متأكد من الإجابة.
+          <br>
+          <span class="choice"><span class="circle"></span> أرفض المحاولة خوفًا من الخطأ أمام الجميع</span>
+          <span class="choice"><span class="circle"></span> أحاول الإجابة رغم خوفي، لأن المحاولة نفسها شجاعة</span>
+        </div>
+      </div>
+    </div>
+    <div class="page-num" style="right:14mm;background:var(--sun);color:var(--ink);">6</div>
+  </div>
+
+  <!-- ============ PAGE 7 — COLORING ============ -->
+  <div class="page color-page">
+    <div class="inner">
+      <span class="kicker" style="background:var(--teal);">🎨 لوّن بإبداع</span>
+      <div class="headline" style="color:var(--teal);">خالد يقف بجانب سامي بانتظار ألوانك</div>
+      <div class="rule"></div>
+
+      <div class="color-frame">
+        <svg viewBox="0 0 400 320" width="170mm">
+          <line x1="10" y1="290" x2="390" y2="290" stroke="#2B2118" stroke-width="3"/>
+          <circle cx="340" cy="45" r="26" fill="none" stroke="#2B2118" stroke-width="3"/>
+          <g stroke="#2B2118" stroke-width="3">
+            <line x1="340" y1="5" x2="340" y2="-4"/>
+            <line x1="374" y1="45" x2="384" y2="45"/>
+            <line x1="365" y1="20" x2="372" y2="13"/>
+            <line x1="365" y1="70" x2="372" y2="77"/>
+          </g>
+          <!-- two kids standing side by side, one with hand on the other's shoulder -->
+          <g stroke="#2B2118" stroke-width="3" fill="none">
+            <circle cx="160" cy="190" r="26"/>
+            <circle cx="152" cy="184" r="2.6" fill="#2B2118"/><circle cx="168" cy="184" r="2.6" fill="#2B2118"/>
+            <path d="M151 198 Q160 203 169 198"/>
+            <line x1="160" y1="216" x2="160" y2="260"/>
+            <line x1="160" y1="230" x2="140" y2="255"/>
+            <line x1="160" y1="230" x2="200" y2="238"/>
+            <line x1="160" y1="260" x2="148" y2="288"/>
+            <line x1="160" y1="260" x2="174" y2="288"/>
+          </g>
+          <g stroke="#2B2118" stroke-width="3" fill="none">
+            <circle cx="235" cy="196" r="24"/>
+            <circle cx="228" cy="190" r="2.6" fill="#2B2118"/><circle cx="242" cy="190" r="2.6" fill="#2B2118"/>
+            <path d="M226 205 Q235 210 244 205"/>
+            <line x1="235" y1="220" x2="235" y2="260"/>
+            <line x1="235" y1="232" x2="216" y2="252"/>
+            <line x1="235" y1="232" x2="255" y2="255"/>
+            <line x1="235" y1="260" x2="223" y2="288"/>
+            <line x1="235" y1="260" x2="248" y2="288"/>
+          </g>
+          <!-- little cape hint on first child -->
+          <path d="M148 214 Q160 240 172 214 L166 250 Q160 254 154 250 Z" fill="none" stroke="#2B2118" stroke-width="2"/>
+          <!-- ground shadow -->
+          <ellipse cx="197" cy="292" rx="90" ry="6" fill="none" stroke="#2B2118" stroke-width="1.5"/>
+          <!-- small stars overhead -->
+          <polygon points="90,60 93,68 101,68 95,73 97,81 90,76 83,81 85,73 79,68 87,68" fill="none" stroke="#2B2118" stroke-width="2"/>
+        </svg>
+      </div>
+    </div>
+    <div class="page-num" style="right:14mm;background:var(--teal);">7</div>
+  </div>
+
+  <!-- ============ PAGE 8 — DID YOU KNOW + GOODBYE ============ -->
+  <div class="page">
+    <div class="inner" style="background:linear-gradient(180deg,#E8F6EE,#FFF8EC 55%);">
+      <span class="kicker" style="background:#4CAF6D;">🌟 هل تعلم؟</span>
+      <div class="headline" style="color:#2C7A4B;">الشجاعة من حولنا</div>
+      <div class="rule" style="background:repeating-linear-gradient(90deg,#4CAF6D 0 10px, var(--sun) 10px 20px);"></div>
+
+      <div class="fact-card">
+        <div style="font-size:40px;">🐝</div>
+        <p>بعض الحشرات مثل النحل تضحّي بنفسها للدفاع عن خليتها، وهو نوع من "الشجاعة" الغريزية التي تدفعها لحماية مجموعتها.</p>
+      </div>
+      <div class="fact-card" style="border-color:var(--teal);">
+        <div style="font-size:40px;">🧠</div>
+        <p>يقول العلماء إن جزء الدماغ المسؤول عن الشعور بالخوف يبقى نشطًا أثناء التصرف الشجاع أيضًا؛ فالفرق ليس في غياب الخوف، بل في القرار الذي نتخذه رغمه.</p>
+      </div>
+      <div class="fact-card" style="border-color:var(--coral);">
+        <div style="font-size:40px;">🕊️</div>
+        <p>كثير من التغييرات الكبيرة في التاريخ بدأت بخطوة صغيرة اتخذها شخص واحد شجاع، قبل أن ينضم إليه آخرون.</p>
+      </div>
+
+      <div class="signoff">
+        <h3>✍️ اكتب قصتك الخاصة</h3>
+        <p style="margin:0 0 4mm;">في المرة القادمة التي تشعر فيها بالخوف من فعل الصواب، عد إلى هنا واكتب ماذا فعلت:</p>
+        <div class="sig-line" style="width:80mm;"></div>
+      </div>
+
+      <div class="next-issue">
+        <span>📅 نراكم في العدد القادم بقيمة جديدة قريبًا</span>
+        <span>قناة صاحب القول: <span class="sig-line" style="width:28mm;border-color:#fff;"></span></span>
+      </div>
+    </div>
+    <div class="page-num" style="right:14mm;background:#4CAF6D;">8</div>
+  </div>
+
+</div>
+</body>
+</html>
